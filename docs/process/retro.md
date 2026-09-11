@@ -25,7 +25,7 @@ It is blameless by rule: the target is the system and the circumstances, never a
 
 ## Invoking it
 
-This page uses Claude Code syntax. The name is the same everywhere, only the prefix changes: `/retro` in Claude Code and Cursor, `@retro` in Codex. Via the generic skills CLI, invoke it by name however that agent exposes skills.
+This page writes `/retro` for brevity, but the prefix depends on how you installed. The plugin namespaces its skills, so it is `/jon:retro` in Claude Code and Cursor and `@jon:retro` in Codex. Installed as files with `npx skills`, it is plain `/retro`.
 
 ## It's working if
 

@@ -25,7 +25,7 @@ By design. Take the finished brief to design and to `/plan-delivery`.
 
 ## Invoking it
 
-This page uses Claude Code syntax. The name is the same everywhere, only the prefix changes: `/investigate-product` in Claude Code and Cursor, `@investigate-product` in Codex. Via the generic skills CLI, invoke it by name however that agent exposes skills.
+This page writes `/investigate-product` for brevity, but the prefix depends on how you installed. The plugin namespaces its skills, so it is `/jon:investigate-product` in Claude Code and Cursor and `@jon:investigate-product` in Codex. Installed as files with `npx skills`, it is plain `/investigate-product`.
 
 ## It's working if
 

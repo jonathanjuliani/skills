@@ -34,7 +34,7 @@ No. Other skills detect conventions on demand. Running setup just caches the res
 
 ## Invoking it
 
-This page uses Claude Code syntax. The name is the same everywhere, only the prefix changes: `/setup-skills` in Claude Code and Cursor, `@setup-skills` in Codex. Via the generic skills CLI, invoke it by name however that agent exposes skills.
+This page writes `/setup-skills` for brevity, but the prefix depends on how you installed. The plugin namespaces its skills, so it is `/jon:setup-skills` in Claude Code and Cursor and `@jon:setup-skills` in Codex. Installed as files with `npx skills`, it is plain `/setup-skills`.
 
 ## It's working if
 
