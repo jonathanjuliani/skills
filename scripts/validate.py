@@ -143,23 +143,16 @@ for f in sorted([*ROOT.glob("skills/**/*"), *ROOT.glob("docs/**/*"), ROOT / "REA
             errors.append(f"{rel}:{i}: trailing whitespace")
             break
 
-try:
-    reg = json.loads((ROOT / ".claude-plugin/plugin.json").read_text())["skills"]
-    json.loads((ROOT / ".claude-plugin/marketplace.json").read_text())
-except Exception as e:
-    errors.append(f".claude-plugin: {e}"); reg = []
 on_disk = {str(p.parent.relative_to(ROOT)) for p in ROOT.glob("skills/*/*/SKILL.md")}
-for missing in sorted(on_disk - {r.lstrip("./") for r in reg}):
-    errors.append(f"{missing}: on disk but not registered in plugin.json")
-for stale in sorted({r.lstrip("./") for r in reg} - on_disk):
-    errors.append(f"{stale}: registered in plugin.json but not on disk")
 
 # Harness manifests. They drift the moment one is edited alone, so the shared
-# fields are compared rather than trusted.
+# fields are compared rather than trusted. Claude Code and Cursor list every
+# leaf path because their plugin loaders do not recurse into bucket folders.
+# Codex walks ./skills/ itself.
 MANIFESTS = {
-    ".claude-plugin/plugin.json": "list",   # lists every skill path explicitly
-    ".codex-plugin/plugin.json": "dir",     # points at ./skills/ and walks it
-    ".cursor-plugin/plugin.json": "dir",
+    ".claude-plugin/plugin.json": "list",
+    ".cursor-plugin/plugin.json": "list",
+    ".codex-plugin/plugin.json": "dir",
 }
 loaded = {}
 for path, kind in MANIFESTS.items():
@@ -176,6 +169,41 @@ for path, kind in MANIFESTS.items():
             errors.append(f"{path}: 'skills' should be './skills/', found {target!r}")
         elif not (ROOT / "skills").is_dir():
             errors.append(f"{path}: 'skills' points at a directory that does not exist")
+    elif kind == "list":
+        listed = loaded[path].get("skills")
+        if not isinstance(listed, list):
+            errors.append(f"{path}: 'skills' should be a list of leaf paths, found {listed!r}")
+        else:
+            names = {r.lstrip("./") for r in listed}
+            for missing in sorted(on_disk - names):
+                errors.append(f"{path}: {missing} on disk but not registered")
+            for stale in sorted(names - on_disk):
+                errors.append(f"{path}: {stale} registered but not on disk")
+
+try:
+    json.loads((ROOT / ".claude-plugin/marketplace.json").read_text())
+except Exception as e:
+    errors.append(f".claude-plugin/marketplace.json: {e}")
+
+try:
+    mkt = json.loads((ROOT / ".cursor-plugin/marketplace.json").read_text())
+    plugins = mkt.get("plugins") or []
+    if not plugins:
+        errors.append(".cursor-plugin/marketplace.json: no plugins listed")
+    else:
+        entry = plugins[0]
+        for banned in ("keywords", "category", "tags"):
+            if banned in entry:
+                errors.append(f".cursor-plugin/marketplace.json: '{banned}' belongs on plugin.json, not the marketplace entry")
+        expected_name = loaded.get(".cursor-plugin/plugin.json", {}).get("name")
+        if expected_name and entry.get("name") != expected_name:
+            errors.append(f".cursor-plugin/marketplace.json: plugin name {entry.get('name')!r} does not match plugin.json {expected_name!r}")
+        if entry.get("source") not in ("./", "."):
+            errors.append(f".cursor-plugin/marketplace.json: source should be './', found {entry.get('source')!r}")
+except FileNotFoundError:
+    errors.append(".cursor-plugin/marketplace.json: missing")
+except Exception as e:
+    errors.append(f".cursor-plugin/marketplace.json: {e}")
 
 if len(loaded) > 1:
     ref_path, ref = next(iter(loaded.items()))

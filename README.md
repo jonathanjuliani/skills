@@ -64,9 +64,19 @@ codex plugin add jon@skills
 
 ### Cursor
 
-Reads `.cursor-plugin/plugin.json`. Cursor separates short always-on policies (`.cursor/rules/*.mdc`) from full workflows (`.cursor/skills/<name>/SKILL.md`); these are workflows, so they belong in the skills layer rather than pasted into rules.
+Reads `.cursor-plugin/plugin.json`, which lists every skill path (Cursor plugins do not recurse into bucket folders). These are workflows, so they belong in the skills layer rather than pasted into `.cursor/rules/*.mdc`.
 
-Syncing by hand instead? Cursor documents a flat `.cursor/skills/<name>/` layout while this repo groups skills into buckets, so copy the leaf directories, not `skills/` itself. Whether Cursor walks the bucket level is untested here.
+**Local (any plan).** Symlink the clone and reload Cursor:
+
+```bash
+ln -s ~/development/jon/skills ~/.cursor/plugins/local/jon
+```
+
+Then fully quit Cursor (`Cmd+Q`) and reopen. Confirm all 30 skills under Customize → Skills, then run `/setup-skills` (or `/jon:setup-skills` if the plugin is namespaced).
+
+**Team Marketplace.** On Teams or Enterprise, an admin can import the GitHub repo: Dashboard → Plugins → Add Marketplace → Import from Repo → `https://github.com/jonathanjuliani/skills`. Cursor reads `.cursor-plugin/marketplace.json`.
+
+**Official Marketplace.** Once listed, install from Customize → Marketplace. Until then, submit the public repo at [cursor.com/marketplace/publish](https://cursor.com/marketplace/publish).
 
 ### Gemini CLI
 

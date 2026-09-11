@@ -1,0 +1,16 @@
+{
+  "name": "skills",
+  "owner": {
+    "name": "Jonathan Juliani"
+  },
+  "metadata": {
+    "description": "Vendor-neutral JS/TS/React skills that resolve the project stack instead of assuming one"
+  },
+  "plugins": [
+    {
+      "name": "jon",
+      "source": "./",
+      "description": "Detects a project's conventions and defers to them."
+    }
+  ]
+}
