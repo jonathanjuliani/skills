@@ -1,0 +1,3 @@
+interface:
+  display_name: "Dependency Choice"
+  short_description: "Whether to add a dep and which, judged on current adoption"

@@ -1,0 +1,3 @@
+interface:
+  display_name: "Migration"
+  short_description: "Expand, migrate, contract, and actually delete the old thing"

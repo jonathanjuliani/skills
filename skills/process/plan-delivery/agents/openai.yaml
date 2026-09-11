@@ -1,0 +1,5 @@
+interface:
+  display_name: "Plan Delivery"
+  short_description: "Sequence asks by value vs effort into phased, cuttable plans"
+policy:
+  allow_implicit_invocation: false

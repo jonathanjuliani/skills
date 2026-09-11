@@ -1,0 +1,17 @@
+#!/bin/sh
+# Structural checks before a commit lands. Offline and fast; the network link
+# check is opt-in via `python3 scripts/validate.py --links`.
+#
+# Enable once per clone:  git config core.hooksPath .githooks
+# Skip a single commit:   git commit --no-verify
+
+if ! command -v python3 >/dev/null 2>&1; then
+  echo "pre-commit: python3 not found, skipping validation" >&2
+  exit 0
+fi
+
+python3 "$(git rev-parse --show-toplevel)/scripts/validate.py" || {
+  echo ""
+  echo "pre-commit: validation failed. Fix the above, or commit with --no-verify." >&2
+  exit 1
+}

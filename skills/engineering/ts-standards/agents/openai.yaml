@@ -1,0 +1,3 @@
+interface:
+  display_name: "TypeScript Standards"
+  short_description: "JS/TS conventions: types, naming, boundaries, errors, async"

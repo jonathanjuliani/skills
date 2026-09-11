@@ -1,0 +1,46 @@
+{
+  "name": "jon",
+  "version": "0.1.0",
+  "description": "Dynamic, vendor-neutral agent skills for JS/TS/React/React Native. Detects a project's conventions and defers to them; recommends the current community default and asks before deciding. Engineering plus process/operational workflows.",
+  "author": {
+    "name": "Jonathan Juliani"
+  },
+  "homepage": "https://github.com/jonathanjuliani/skills",
+  "repository": "https://github.com/jonathanjuliani/skills",
+  "license": "MIT",
+  "keywords": [
+    "skills",
+    "typescript",
+    "react",
+    "react-native",
+    "monorepo",
+    "conventions",
+    "scaffolding",
+    "product",
+    "delivery",
+    "diagrams",
+    "security",
+    "accessibility",
+    "frontend",
+    "observability",
+    "ci-cd"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "jon-skills",
+    "shortDescription": "Vendor-neutral JS/TS/React skills that resolve a project's stack instead of assuming one",
+    "longDescription": "Engineering and delivery skills for JavaScript, TypeScript, React and React Native. Every tool choice is resolved from the project first, then a company standard, then a personal default, then the current community default offered and confirmed. Covers project shape, scaffolding, refactoring, API and state design, testing, security, frontend craft, performance, observability, shipping, migration, and the product work around the code.",
+    "developerName": "Jonathan Juliani",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/jonathanjuliani/skills",
+    "defaultPrompt": [
+      "Resolve this project's conventions before we change anything",
+      "Scaffold this the way the rest of the project is built"
+    ]
+  }
+}

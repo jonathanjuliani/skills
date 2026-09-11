@@ -1,0 +1,3 @@
+interface:
+  display_name: "Security hardening"
+  short_description: "Control the boundaries where a system extends trust"

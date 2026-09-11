@@ -1,0 +1,3 @@
+interface:
+  display_name: "Agent instructions"
+  short_description: "Write an AGENTS.md or CLAUDE.md whose rules actually bind"

@@ -1,0 +1,3 @@
+interface:
+  display_name: "Testing Strategy"
+  short_description: "Choose seams and test kinds; concentrate on critical paths"

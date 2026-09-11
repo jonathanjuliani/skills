@@ -1,0 +1,43 @@
+# Personal defaults (tier 3 of the precedence chain).
+# Applied only when the project (tier 1) and company (tier 2) are silent.
+# On greenfield these are offered alongside the community recommendation, then confirmed.
+# Edit freely: this file is the one place personal preference lives.
+
+owner: Jonathan Juliani
+
+javascript:
+  package_manager: pnpm        # fast, disk-efficient, strong workspaces for monorepos
+  runtime: node                # default runtime unless the project targets bun/deno
+  module_system: esm           # "type": "module"; prefer ESM for new packages
+
+quality:
+  lint_format: biome           # one fast tool for lint + format, near-zero config
+  # If a project needs deep React Native / a11y / hooks plugin coverage, prefer
+  # ESLint + Prettier for that project. Note the tradeoff, do not force biome there.
+
+testing:
+  runner: vitest               # vite-native, fast, jest-compatible API, first-class TS/ESM
+  # React Native is the standing exception: Jest is the only officially supported
+  # runner there, so an RN project resolves to Jest rather than overriding this.
+  style: behavior              # test at public seams, not implementation details
+
+validation:
+  library: zod                 # TS-first schema/validation at API, form, and env boundaries
+
+typescript:
+  strict: true                 # strict tsconfig by default
+  prefer: type-aliases         # prefer `type` over `interface` unless declaration merging is needed
+
+conventions:
+  naming:
+    files: kebab-case          # kebab-case filenames
+    components: PascalCase      # React components in PascalCase
+    variables: camelCase
+    constants: UPPER_SNAKE_CASE
+  barrels: sparingly           # avoid deep barrel files; they hurt tree-shaking and create cycles
+
+# Framework leanings (still deferring to whatever a project already uses):
+frameworks:
+  web: next                    # React web default when greenfield and a framework is wanted
+  mobile: expo                 # React Native default: Expo over bare RN unless native modules force bare
+  backend: none                # no strong default; recommend per project (Hono/Express/Nest/Fastify)

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Investigate Product"
+  short_description: "Sharpen the problem before any solution; produce a brief"
+policy:
+  allow_implicit_invocation: false

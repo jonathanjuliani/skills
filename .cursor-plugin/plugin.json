@@ -1,0 +1,30 @@
+{
+  "name": "jon",
+  "version": "0.1.0",
+  "description": "Dynamic, vendor-neutral agent skills for JS/TS/React/React Native. Detects a project's conventions and defers to them; recommends the current community default and asks before deciding. Engineering plus process/operational workflows.",
+  "author": {
+    "name": "Jonathan Juliani"
+  },
+  "homepage": "https://github.com/jonathanjuliani/skills",
+  "repository": "https://github.com/jonathanjuliani/skills",
+  "license": "MIT",
+  "keywords": [
+    "skills",
+    "typescript",
+    "react",
+    "react-native",
+    "monorepo",
+    "conventions",
+    "scaffolding",
+    "product",
+    "delivery",
+    "diagrams",
+    "security",
+    "accessibility",
+    "frontend",
+    "observability",
+    "ci-cd"
+  ],
+  "displayName": "jon-skills",
+  "skills": "./skills/"
+}

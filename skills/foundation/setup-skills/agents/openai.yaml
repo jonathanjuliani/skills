@@ -1,0 +1,5 @@
+interface:
+  display_name: "setup-skills"
+  short_description: "Confirm defaults, detect the project, write per-repo config"
+policy:
+  allow_implicit_invocation: false

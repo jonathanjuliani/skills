@@ -1,0 +1,3 @@
+interface:
+  display_name: "API Design"
+  short_description: "Pick REST/tRPC/GraphQL by consumer; typed, validated contracts"

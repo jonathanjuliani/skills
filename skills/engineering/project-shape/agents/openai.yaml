@@ -1,0 +1,3 @@
+interface:
+  display_name: "Project Shape"
+  short_description: "Detect single-repo/monorepo/modular and recommend structure"

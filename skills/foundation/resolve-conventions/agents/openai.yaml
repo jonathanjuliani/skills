@@ -1,0 +1,3 @@
+interface:
+  display_name: "Resolve Conventions"
+  short_description: "Detect a project's stack, defer to it, recommend the rest"

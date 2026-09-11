@@ -1,0 +1,3 @@
+interface:
+  display_name: "Design tokens"
+  short_description: "Name decisions by role so a theme change is a swap, not a rewrite"

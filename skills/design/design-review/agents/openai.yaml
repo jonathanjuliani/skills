@@ -1,0 +1,3 @@
+interface:
+  display_name: "Design review"
+  short_description: "Scored usability critique ranked by user impact"

@@ -1,0 +1,3 @@
+interface:
+  display_name: "Ship flow"
+  short_description: "Move a change to production in small steps with an undo path"

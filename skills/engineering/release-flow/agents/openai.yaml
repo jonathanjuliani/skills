@@ -1,0 +1,3 @@
+interface:
+  display_name: "Release Flow"
+  short_description: "Versioning, changelog, and publishing; match the project's process"

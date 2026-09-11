@@ -1,0 +1,3 @@
+interface:
+  display_name: "Performance Audit"
+  short_description: "Measure, fix the dominant cost, re-measure; per surface"

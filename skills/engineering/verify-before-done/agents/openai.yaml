@@ -1,0 +1,3 @@
+interface:
+  display_name: "Verify before done"
+  short_description: "Prove completion claims with fresh command output"

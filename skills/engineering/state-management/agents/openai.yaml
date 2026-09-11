@@ -1,0 +1,3 @@
+interface:
+  display_name: "State Management"
+  short_description: "Separate server vs client state; pick the right tool per role"
