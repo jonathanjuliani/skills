@@ -168,7 +168,7 @@ Design decides what a surface should be and whether it is good; engineering buil
 
 They run in that order on a new surface: a read, then the structure, then the direction and its tokens, then the build in `engineering/`, then the score. On an existing product most of it is already answered and the job is to inherit rather than decide.
 
-`design-inspiration` accumulates what it learns in a personal store at `~/.jon-skills/design/references/`, one file per reference, recording what was taken, what was rejected, and the audience it came from. Personal rather than in the repo, because an installed plugin is read-only and the point is to accumulate across projects. It is the design counterpart to the personal tier of the precedence chain, and it is meant to outgrow the conventions shipped here.
+`design-inspiration` ships a seed of captured references under `skills/design/design-inspiration/references/`, and accumulates further reads in a personal store at `~/.jon-skills/design/references/`. One file per reference, recording what was taken, what was rejected, and the audience it came from. New captures go to the personal store unless asked to ship. The personal store outranks the seed, and both sit above the conventions in `patterns.md`. It is the design counterpart to the personal and community tiers of the precedence chain.
 
 Accessibility splits three ways rather than being one pass: a linter catches the static mistakes, `axe` in CI catches the computed ones, and only what neither can see reaches a human review. `frontend-craft` carries that split, and `design-review` refuses to spend attention on anything the first two tiers should have gated.
 

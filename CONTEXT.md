@@ -17,7 +17,8 @@ Shared vocabulary for the jon-skills plugin. Skills read this so their words mea
 
 - `.jon-skills/config.yaml` (per repo): resolved conventions and project shape for this repo, written by `setup-skills`.
 - `.jon-skills/company.yaml` (per repo, optional): company standardization choices that outrank personal defaults.
-- `~/.jon-skills/design/references/` (per machine, optional): captured design references, one file per source, written by `design-inspiration`. Personal rather than in the repo, because an installed plugin is read-only and the value is in accumulating across projects. It is the design counterpart to tier 3 of the precedence chain.
+- `skills/design/design-inspiration/references/` (shipped with the plugin): starter design-reference captures, one file per source. Community seed for `design-inspiration`. Outranked by the personal store and by the project.
+- `~/.jon-skills/design/references/` (per machine, optional): captured design references, one file per source, written by `design-inspiration`. Personal, because an installed plugin is otherwise read-only and the value is in accumulating across projects. It is the design counterpart to tier 3 of the precedence chain and outranks the shipped seed.
 - **Agent instructions block** (per repo, optional): a short verification rule written between `jon-skills:verification` markers in the repo's `AGENTS.md` or `CLAUDE.md`, offered by `setup-skills`. It exists so a completion gate is in context without needing an invocation.
 
 ## Conventions for authoring these skills

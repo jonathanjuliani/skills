@@ -2,13 +2,16 @@
 
 How a reference becomes a durable entry instead of a one-off reading. Without this step, every extraction is thrown away and the twentieth reference teaches as little as the first.
 
-## Where it goes, and why not in the plugin
+## Where it goes
 
-The store is `~/.jon-skills/design/references/`, one markdown file per reference.
+There are two stores, same format, different jobs.
 
-Personal, because an installed plugin is a read-only bundle and cannot be written to. Outside the project, because the value is in accumulating across projects: a reference read for one client is evidence for the next. Private, because a scrape carries other people's identity and a captured note carries your own judgement about a client's audience.
+- **Personal:** `~/.jon-skills/design/references/`, one markdown file per reference. Per machine, writable after install, accumulates across projects. This is where new captures go.
+- **Shipped seed:** [references/](references/) in this skill. Travels with the plugin. Starter reads that cover the archetypes in [patterns.md](patterns.md) so the store is not empty on a fresh install. Outranked by the personal store.
 
-This mirrors the precedence chain the rest of the plugin uses. For design the tiers read: the project's own tokens and screens, then a company brand, then this personal store, then the community conventions shipped in [patterns.md](patterns.md). Higher always wins, and a captured note never outranks what the project already does.
+Shipping a new file into the plugin is an explicit ask. An installed plugin is otherwise a read-only bundle, which is why day-to-day capture is personal.
+
+This mirrors the precedence chain the rest of the plugin uses. For design the tiers read: the project's own tokens and screens, then a company brand, then the personal store, then the shipped seed, then the community conventions in [patterns.md](patterns.md). Higher always wins, and a captured note never outranks what the project already does.
 
 ## The entry
 
@@ -49,10 +52,12 @@ Three sections, and the middle one carries half the value. **Rejected** is what 
 
 ## Reading the store back
 
-Before a design read, look for entries whose `surface` and `audience` resemble the one in front of you. Two or three relevant entries beat the whole store, and an entry from a different audience is evidence about that audience, not this one.
+Before a design read, look for entries whose `surface` and `audience` resemble the one in front of you. Check the personal store first, then the shipped seed. Two or three relevant entries beat the whole store, and an entry from a different audience is evidence about that audience, not this one.
+
+The shipped seed has a provenance index at [references/README.md](references/README.md): source, surface, audience only. Use it to find the files to open, not as a substitute for reading them. The personal store stays unindexed until scanning it costs more than reading it.
 
 Say when a recommendation came from the store and from which entry, the same way `resolve-conventions` names the tier a decision came from. A recommendation whose source is invisible cannot be argued with.
 
 ## When there is not enough in it yet
 
-Below roughly fifteen entries, reading the whole directory is faster than any index, and the store is mostly a notebook. That is the correct shape for it at that size. Build search when scanning starts costing more than reading, not before, and note that an index over five entries is a worse version of a prose file.
+The shipped seed exists so a fresh install is not starting from zero. Below roughly fifteen *personal* entries, reading that directory is faster than any index, and the personal store is mostly a notebook. That is the correct shape for it at that size. Build search when scanning starts costing more than reading, not before, and note that an index over five entries is a worse version of a prose file.

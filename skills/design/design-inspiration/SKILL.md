@@ -46,7 +46,9 @@ Treat the output as a **starting point to edit, never a result to ship**:
 
 A reference read and discarded teaches once. Write the findings to the personal store at `~/.jon-skills/design/references/`, one file per reference, recording what you took, **what you rejected and why**, the surface and audience it came from, and a date. The format and the rules are in [capture.md](capture.md).
 
-Offer this rather than doing it silently, and check the store before a new read: two or three entries with a similar surface and audience are worth more than the whole thing.
+A shipped seed lives in [references/](references/). It is the community tier of this store: starter reads that travel with the plugin. The personal store outranks it. New captures go to the personal store unless the user asks to ship them.
+
+Offer this rather than doing it silently, and check both stores before a new read: two or three entries with a similar surface and audience are worth more than the whole thing. Personal first, then the shipped seed, then [patterns.md](patterns.md).
 
 ## Know convention from signature
 
