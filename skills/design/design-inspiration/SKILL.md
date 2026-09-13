@@ -26,7 +26,7 @@ Work from the surface inward, and write down what you find as convention rather 
 3. **Density and rhythm.** How much sits in a given area, and whether the spacing follows a visible scale.
 4. **Type.** How many sizes and weights are actually in use. Restrained interfaces use far fewer than people expect.
 5. **Colour discipline.** How much of the surface is neutral, and what colour is reserved for.
-6. **Motion.** What moves, what it explains, and how long it takes.
+6. **Motion.** What moves, what it explains, and how long it takes. Assign a level from [motion.md](motion.md): **minimal**, **purposeful**, or **cinematic**.
 7. **Copy.** Whether it is specific or generic. Specificity is a design property, and it is usually the thing that makes a reference feel credible.
 
 Then state the transferable finding in one line each: "type is two weights and four sizes, no more", not "headings are 34px Inter Semibold".
@@ -48,13 +48,13 @@ A reference read and discarded teaches once. Write the findings to the personal 
 
 A shipped seed lives in [references/](references/). It is the community tier of this store: starter reads that travel with the plugin. The personal store outranks it. New captures go to the personal store unless the user asks to ship them.
 
-Offer this rather than doing it silently, and check both stores before a new read: two or three entries with a similar surface and audience are worth more than the whole thing. Personal first, then the shipped seed, then [patterns.md](patterns.md).
+Offer this rather than doing it silently, and check both stores before a new read: two or three entries with a similar surface and audience are worth more than the whole thing. Personal first, then the shipped seed, then [patterns.md](patterns.md). When those stores are thin for this surface and audience, or the user wants the base updated from galleries, Call the Skill tool with "curate-design-inspiration" (it will confirm before any crawl or write).
 
 ## Know convention from signature
 
 The most useful distinction in this skill. A **convention** is a pattern so widespread that departing from it costs the user; reuse it freely. A **signature** is one product's recognisable choice; reusing it is imitation.
 
-[patterns.md](patterns.md) records the conventions worth reusing, the archetypes worth choosing between, and the things mature interfaces reliably avoid. Read the last section first: it is the highest-signal part, and it is mostly a list of what generated interfaces do that shipped ones do not.
+[patterns.md](patterns.md) records the conventions worth reusing, the archetypes worth choosing between, and the things mature interfaces reliably avoid. Read the last section first: it is the highest-signal part, and it is mostly a list of what generated interfaces do that shipped ones do not. [motion.md](motion.md) is the parallel axis for how much the interface moves: layout archetypes and motion levels are chosen independently.
 
 ## Rules
 

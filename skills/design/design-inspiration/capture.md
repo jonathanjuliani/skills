@@ -21,6 +21,7 @@ source: https://example.com/pricing
 captured: 2026-09-14
 surface: marketing pricing page
 audience: procurement committee comparing vendors
+motion: purposeful
 verify_after: 2027-03-14
 ---
 
@@ -47,6 +48,7 @@ Three sections, and the middle one carries half the value. **Rejected** is what 
 - **Findings, never measurements.** "Two weights, four sizes" transfers to any project. "34px Inter Semibold" transfers to none. A file full of pixel values is a museum of somebody else's CSS.
 - **Identity never enters the store.** Logos, wordmarks, a signature brand hue, a distinctive illustration style, a named signature layout. This is the convention-versus-signature line from the parent skill, applied as a filter at write time rather than as advice at read time. A stored signature will eventually be applied by someone who has forgotten where it came from.
 - **Always record the read it came from.** A finding without its surface and audience is unusable later, because you cannot tell whether it applies. This is why `surface` and `audience` are required fields.
+- **Tag motion when the read is clear.** Optional frontmatter `motion: minimal | purposeful | cinematic` (see [motion.md](motion.md)). Omit it when motion is not distinctive; do not invent a level to fill the field.
 - **Date it and set a reverification trigger.** Convention drifts. An undated store becomes confidently wrong, which is worse than a dated snapshot that admits what it is. Six months is a reasonable default; shorter for anything fast-moving.
 - **One reference per file, named for the source.** Merging references loses the provenance that makes the store trustworthy.
 
@@ -61,3 +63,5 @@ Say when a recommendation came from the store and from which entry, the same way
 ## When there is not enough in it yet
 
 The shipped seed exists so a fresh install is not starting from zero. Below roughly fifteen *personal* entries, reading that directory is faster than any index, and the personal store is mostly a notebook. That is the correct shape for it at that size. Build search when scanning starts costing more than reading, not before, and note that an index over five entries is a worse version of a prose file.
+
+When the store is thin for the surface and audience in front of you, or the user wants the base populated or refreshed from galleries, Call the Skill tool with "curate-design-inspiration". That skill confirms scope first, deduplicates against both stores, and writes new capture files to the personal store.

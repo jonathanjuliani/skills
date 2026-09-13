@@ -3,6 +3,7 @@ source: https://www.gov.uk
 captured: 2026-09-11
 surface: public-sector service directory
 audience: residents looking for a specific government task
+motion: minimal
 verify_after: 2027-03-11
 ---
 

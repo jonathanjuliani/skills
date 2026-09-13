@@ -3,6 +3,7 @@ source: https://www.eclipse.space
 captured: 2026-09-11
 surface: cinematic B2B marketing
 audience: sovereign and commercial buyers of space infrastructure
+motion: cinematic
 verify_after: 2027-03-11
 ---
 

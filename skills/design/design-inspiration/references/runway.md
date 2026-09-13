@@ -3,6 +3,7 @@ source: https://runway.com
 captured: 2026-09-11
 surface: AI-lab marketing homepage
 audience: creatives and enterprises evaluating generative video
+motion: cinematic
 verify_after: 2027-03-11
 ---
 

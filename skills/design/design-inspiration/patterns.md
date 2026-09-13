@@ -39,6 +39,8 @@ These are shapes, not styles, and picking one deliberately is the point. Each su
 - **Focused single task.** One thing on screen, everything else removed. For checkout, onboarding steps, destructive confirmations.
 - **Canvas.** Direct manipulation of a spatial artifact. Expensive to build and to make accessible; choose it only when the object really is spatial.
 
+These shapes are independent of motion intensity. A list-detail surface can be minimal or purposeful; a landing can be text-led and still cinematic. Pick the archetype for structure, then the motion level from [motion.md](motion.md).
+
 ## Signatures to leave alone
 
 Recognisable enough that reusing them is imitation rather than convention: a wordmark or logotype, a specific brand hue, a named signature layout, a distinctive illustration or 3D style, a proprietary typeface, a recognisable mascot, a specific hero animation. Take the reasoning underneath if it applies; leave the artifact.

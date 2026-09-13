@@ -3,6 +3,7 @@ source: https://linear.app
 captured: 2026-09-11
 surface: product marketing with a live product canvas
 audience: product teams evaluating a dense issue tracker
+motion: purposeful
 verify_after: 2027-03-11
 ---
 
