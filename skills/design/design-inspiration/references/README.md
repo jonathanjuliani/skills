@@ -10,13 +10,13 @@ Aim for at least two or three relevant entries per archetype before reaching for
 
 | Archetype | Seed files |
 | --- | --- |
-| Text-led landing | [gov-uk.md](gov-uk.md), [pear.md](pear.md), [resend.md](resend.md), [cloaked.md](cloaked.md) |
-| Product-led landing | [linear.md](linear.md), [formable.md](formable.md), [auctor.md](auctor.md), [superpower.md](superpower.md), [github.md](github.md) |
+| Text-led landing | [gov-uk.md](gov-uk.md), [pear.md](pear.md), [resend.md](resend.md), [cloaked.md](cloaked.md), [openclaw.md](openclaw.md), [xerx.md](xerx.md), [dondi-bogusky.md](dondi-bogusky.md), [neon.md](neon.md), [reapi.md](reapi.md), [localcan.md](localcan.md), [papermark.md](papermark.md), [rerun.md](rerun.md) |
+| Product-led landing | [linear.md](linear.md), [formable.md](formable.md), [auctor.md](auctor.md), [superpower.md](superpower.md), [github.md](github.md), [amie.md](amie.md), [taito.md](taito.md), [mezmo.md](mezmo.md), [coderabbit.md](coderabbit.md) |
 | Asymmetric landing | [loom.md](loom.md), [stripe.md](stripe.md), [apple.md](apple.md) |
-| Panel grid | [raycast.md](raycast.md), [vercel.md](vercel.md), [moonb.md](moonb.md) |
-| Editorial | [whole-earth-index.md](whole-earth-index.md), [cosmos.md](cosmos.md), [sarah-zaheer.md](sarah-zaheer.md), [rome-michal.md](rome-michal.md) |
-| List and detail | [github-issues.md](github-issues.md), [product-hunt.md](product-hunt.md), [lobsters.md](lobsters.md), [hacker-news.md](hacker-news.md) |
-| Dense table | [glow-finance-markets.md](glow-finance-markets.md), [defillama.md](defillama.md), [coingecko.md](coingecko.md) |
+| Panel grid | [raycast.md](raycast.md), [vercel.md](vercel.md), [moonb.md](moonb.md), [wiz.md](wiz.md) |
+| Editorial | [whole-earth-index.md](whole-earth-index.md), [cosmos.md](cosmos.md), [sarah-zaheer.md](sarah-zaheer.md), [rome-michal.md](rome-michal.md), [making-software.md](making-software.md), [openclaw-blog.md](openclaw-blog.md) |
+| List and detail | [github-issues.md](github-issues.md), [product-hunt.md](product-hunt.md), [lobsters.md](lobsters.md), [hacker-news.md](hacker-news.md), [the-index.md](the-index.md), [openclaw-blog.md](openclaw-blog.md), [coderabbit.md](coderabbit.md) |
+| Dense table | [glow-finance-markets.md](glow-finance-markets.md), [defillama.md](defillama.md), [coingecko.md](coingecko.md), [caniuse.md](caniuse.md), [bun.md](bun.md) |
 | Focused single task | [stripe-checkout.md](stripe-checkout.md), [github-signup.md](github-signup.md), [cal-booking.md](cal-booking.md) |
 | Canvas | [tldraw.md](tldraw.md), [excalidraw.md](excalidraw.md), [diagrams-net.md](diagrams-net.md), [photopea.md](photopea.md) |
 
@@ -28,8 +28,8 @@ Independent of archetype. Tag new captures with `motion:` when the read is clear
 
 | Level | Seed files |
 | --- | --- |
-| Minimal | [gov-uk.md](gov-uk.md), [hacker-news.md](hacker-news.md), [github-issues.md](github-issues.md), [product-hunt.md](product-hunt.md), [lobsters.md](lobsters.md), [cal-booking.md](cal-booking.md), [github-signup.md](github-signup.md) |
-| Purposeful | [linear.md](linear.md), [stripe-checkout.md](stripe-checkout.md), [tldraw.md](tldraw.md), [excalidraw.md](excalidraw.md), [diagrams-net.md](diagrams-net.md), [photopea.md](photopea.md) |
+| Minimal | [gov-uk.md](gov-uk.md), [hacker-news.md](hacker-news.md), [github-issues.md](github-issues.md), [product-hunt.md](product-hunt.md), [lobsters.md](lobsters.md), [cal-booking.md](cal-booking.md), [github-signup.md](github-signup.md), [openclaw-blog.md](openclaw-blog.md), [making-software.md](making-software.md), [the-index.md](the-index.md), [reapi.md](reapi.md), [caniuse.md](caniuse.md), [neon.md](neon.md), [dondi-bogusky.md](dondi-bogusky.md), [papermark.md](papermark.md), [rerun.md](rerun.md) |
+| Purposeful | [linear.md](linear.md), [stripe-checkout.md](stripe-checkout.md), [tldraw.md](tldraw.md), [excalidraw.md](excalidraw.md), [diagrams-net.md](diagrams-net.md), [photopea.md](photopea.md), [openclaw.md](openclaw.md), [mezmo.md](mezmo.md), [wiz.md](wiz.md), [amie.md](amie.md), [taito.md](taito.md), [xerx.md](xerx.md), [bun.md](bun.md), [coderabbit.md](coderabbit.md), [localcan.md](localcan.md) |
 | Cinematic | [eclipse-space.md](eclipse-space.md), [seasats.md](seasats.md), [runway.md](runway.md) |
 
 ## Full provenance index
@@ -87,3 +87,21 @@ Independent of archetype. Tag new captures with `motion:` when the read is clear
 | [stripe-checkout.md](stripe-checkout.md) | focused hosted checkout with live preview | a buyer completing payment for one product, and builders inspecting checkout configuration |
 | [diagrams-net.md](diagrams-net.md) | diagramming canvas application | people structuring flowcharts and architecture diagrams as spatial documents |
 | [photopea.md](photopea.md) | raster and vector photo editor canvas application | people editing images in the browser with desktop-class tool density |
+| [openclaw.md](openclaw.md) | open-source AI assistant marketing homepage with install paths | developers and power users deciding to run a personal agent locally |
+| [openclaw-blog.md](openclaw-blog.md) | product engineering blog index with topic filters | builders and operators following releases, security, and onboarding notes |
+| [making-software.md](making-software.md) | illustrated reference-manual marketing with dense chapter index | designers and builders who want systems literacy, not a tutorial checklist |
+| [mezmo.md](mezmo.md) | SRE agent product marketing with operational workflow density | SRE and platform teams evaluating governed agents in production |
+| [wiz.md](wiz.md) | dense B2B cloud-security marketing with graph and agent narrative | security leaders comparing code-to-cloud platforms for AI-era defense |
+| [amie.md](amie.md) | AI productivity startup marketing with workflow narrative | knowledge workers replacing meeting bots and calendar glue with one agentic app |
+| [taito.md](taito.md) | people-ops AI startup marketing with product-led assistant chrome | founders and people leads scaling from spreadsheets to governed HR workflows |
+| [the-index.md](the-index.md) | dense curated directory of design studios | clients and peers scanning studios by place, practice, and signal |
+| [reapi.md](reapi.md) | agent-first API documentation home for a multimodal AI gateway | developers and agents integrating image, video, audio, and chat models over one HTTP API |
+| [xerx.md](xerx.md) | indie web and AI studio marketing for founders | founders and marketing teams hiring a small multi-discipline studio |
+| [caniuse.md](caniuse.md) | dense browser-support reference with search-first home | web developers checking feature support across browsers and devices |
+| [neon.md](neon.md) | agent-oriented backend documentation home with task table | developers and coding agents provisioning Postgres-backed backends |
+| [bun.md](bun.md) | developer-runtime marketing with dense reproducible benchmarks | JavaScript developers choosing a runtime, package manager, test runner, or bundler |
+| [dondi-bogusky.md](dondi-bogusky.md) | personal engineer blog and notes index | peers and hiring managers scanning practical web craft writing |
+| [coderabbit.md](coderabbit.md) | AI code-review product marketing with dense PR triage queues | engineering teams drowning in agent-generated pull requests |
+| [papermark.md](papermark.md) | open-source VDR marketing with agent and docs-first structure | founders, funds, and advisors running permissioned deal rooms |
+| [rerun.md](rerun.md) | technical data-layer docs and product home for Physical AI | robotics and multimodal AI teams inspecting, querying, and training on sensor data |
+| [localcan.md](localcan.md) | text-led developer tunneling tool marketing | developers, designers, and agents sharing localhost without deploying |
