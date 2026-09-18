@@ -1,6 +1,6 @@
 # jon-skills
 
-Vendor-neutral agent skills for JavaScript, TypeScript, React and React Native, plus the design and delivery work around the code. 30 skills, installable as a plugin or as plain files.
+Vendor-neutral agent skills for JavaScript, TypeScript, React and React Native, plus the design and delivery work around the code. 31 skills, installable as a plugin or as plain files.
 
 ## What makes it different
 
@@ -72,7 +72,7 @@ Reads `.cursor-plugin/plugin.json`, which lists every skill path (Cursor plugins
 ln -s ~/development/jon/skills ~/.cursor/plugins/local/jon
 ```
 
-Then fully quit Cursor (`Cmd+Q`) and reopen. Confirm all 30 skills under Customize → Skills, then run `/setup-skills` (or `/jon:setup-skills` if the plugin is namespaced).
+Then fully quit Cursor (`Cmd+Q`) and reopen. Confirm all 31 skills under Customize → Skills, then run `/setup-skills` (or `/jon:setup-skills` if the plugin is namespaced).
 
 **Team Marketplace.** On Teams or Enterprise, an admin can import the GitHub repo: Dashboard → Plugins → Add Marketplace → Import from Repo → `https://github.com/jonathanjuliani/skills`. Cursor reads `.cursor-plugin/marketplace.json`.
 
@@ -133,7 +133,7 @@ For scripting, the `claude plugin` shell commands do the same without opening th
 ### Foundation
 
 - **resolve-conventions** (model-invoked): the precedence engine. Detects a project's conventions and resolves anything unresolved against personal then community defaults.
-- **setup-skills** (user-invoked): one-time setup. Confirm personal defaults, detect the project, write `.jon-skills/config.yaml`, and **optionally** add a verification block to the repo's `AGENTS.md` or `CLAUDE.md`.
+- **setup-skills** (user-invoked): one-time setup. Confirm personal defaults, detect the project, write `.jon-skills/config.yaml`, and **optionally** add two blocks to the repo's `AGENTS.md` or `CLAUDE.md`: a verification rule, and a routing table mapping the moments of a task to the skill that owns each. Each is asked separately and written only between its own markers.
 - **agent-instructions** (model-invoked): write or repair a repo's `AGENTS.md` or `CLAUDE.md` so its rules actually bind, on the budget of being read every turn.
 
 ### Engineering
@@ -175,7 +175,7 @@ Accessibility splits three ways rather than being one pass: a linter catches the
 
 ### Process
 
-- **align-first** (model-invoked): restate the ask, name the assumptions you would otherwise make silently, surface only the branches whose answers change the work, then continue under stated defaults rather than blocking.
+- **align-first** (model-invoked): restate the ask, name the assumptions you would otherwise make silently, surface only the branches whose answers change the work, then continue under stated defaults rather than blocking. Escalates into a bounded interview when that pass does not land, with the declared branch list as its budget.
 - **investigate-product** (user-invoked): investigate the product and user problem before any solution is designed. Output is a short problem brief.
 - **plan-delivery** (user-invoked): sequence a set of asks into phases by value versus effort, with a thin first slice and clear cut lines.
 - **diagram** (model-invoked): choose the right diagram for what is being explained and render it.
@@ -192,7 +192,7 @@ This pack is self-contained: nothing here requires another plugin to work. A few
 
 | Want | Where it lives |
 | --- | --- |
-| A relentless interview until every branch is resolved | `grill-me` and `grill-with-docs` in [mattpocock/skills](https://github.com/mattpocock/skills). `align-first` here is the one-pass version you run every time |
+| A standalone session that grills a plan you already have | `grill-me` and `grill-with-docs` in [mattpocock/skills](https://github.com/mattpocock/skills). `align-first` here runs one cheap pass every time and escalates into a bounded interview when that pass does not land, which covers the same ground from the other end |
 | A deeper test-driven discipline | `obra/superpowers` and `mattpocock/skills` both ship one. `testing-strategy` here carries the loop well enough to work alone |
 | Extracting a token set from a live site | [arvindrk/extract-design-system](https://github.com/arvindrk/extract-design-system), which `design-inspiration` points at rather than reimplementing |
 | Building and stress-testing a domain model | `domain-modeling` in [mattpocock/skills](https://github.com/mattpocock/skills). `agent-instructions` here covers what a `CONTEXT.md` should contain |
@@ -203,7 +203,7 @@ Claude Code's own `/code-review`, `/simplify`, `/run` and `dataviz` are referenc
 
 Only Claude Code has been measured, and `evals/RESULTS.md` records what was tested, what was not, and what failed. Three things carry over:
 
-- **A model-invoked skill was never reached for on its own** across eleven runs, on two models. The pack works around this by wiring the important gates into skills that do fire, and by offering to write a verification rule into the repo's `AGENTS.md`.
+- **A model-invoked skill was never reached for on its own** across eleven runs, on two models. The pack works around this three ways: wiring the important gates into skills that do fire, offering to write a verification rule into the repo's `AGENTS.md`, and offering a routing block in the same file that maps the recurring moments of a task to the skill that owns each. The first has eval evidence behind it. The second and third rest on the same reasoning (a file read every turn reaches the model, a description does not) and neither has been measured yet.
 - **Cross-skill chaining** (`Call the Skill tool with "..."`) is Claude Code phrasing. Whether another harness acts on it is untested, so elsewhere treat each skill as self-contained.
 - **Nothing in `design/`, and no frontend skill, has an eval.** Eight skills now cover that territory on reasoning alone. `design-review` is the only one whose output is structured enough to score objectively, so it is the one to measure first.
 

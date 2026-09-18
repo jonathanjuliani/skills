@@ -66,14 +66,121 @@ for f in sorted(ROOT.glob("skills/*/*/SKILL.md")):
         errors.append(f"{rel}: contains an em-dash, which the authoring conventions ban")
     if "## When this does not apply" not in text:
         errors.append(f"{rel}: missing the 'When this does not apply' guardrail")
+
+    # A model-invoked skill is reached only through its description, so the
+    # description carries triggers. A user-invoked one is human-facing by
+    # convention and is exempt from both checks below.
+    user_invoked = fm.get("disable-model-invocation") in (True, "true")
+    desc = fm.get("description") or ""
+    if not user_invoked and "Use when" not in desc:
+        errors.append(f"{rel}: description has no 'Use when' clause. A model-invoked "
+                      f"skill is routed on its description; see .agents/conventions.md.")
+
+    # policy.allow_implicit_invocation is the OpenAI-side half of the same
+    # decision as disable-model-invocation. One without the other means a skill
+    # is user-invoked on one harness and model-invoked on another.
+    oai = f.parent / "agents" / "openai.yaml"
+    if oai.exists() and yaml is not None:
+        try:
+            meta = yaml.safe_load(oai.read_text()) or {}
+        except yaml.YAMLError as exc:
+            errors.append(f"{rel}: agents/openai.yaml is not valid YAML. {exc}")
+            meta = None
+        if meta is not None:
+            iface = meta.get("interface") or {}
+            for key in ("display_name", "short_description"):
+                if not iface.get(key):
+                    errors.append(f"{rel}: agents/openai.yaml missing interface.{key}")
+            implicit = (meta.get("policy") or {}).get("allow_implicit_invocation")
+            if user_invoked and implicit is not False:
+                errors.append(f"{rel}: has disable-model-invocation but its openai.yaml "
+                              f"does not set policy.allow_implicit_invocation: false.")
+            if not user_invoked and implicit is False:
+                errors.append(f"{rel}: openai.yaml forbids implicit invocation but the "
+                              f"frontmatter has no disable-model-invocation. Set both or neither.")
+
     if fm.get("name"):
         skills[fm["name"]] = text
 
+graph = {}
 for name, text in skills.items():
-    for ref in re.findall(r'call the Skill tool with "([^"]+)"', text, re.IGNORECASE):
+    refs = re.findall(r'call the Skill tool with "([^"]+)"', text, re.IGNORECASE)
+    for ref in refs:
         if ref not in skills:
             errors.append(f"{name}: calls '{ref}', which is not a skill in this pack. "
                           f"The Skill tool cannot reach another plugin's skill.")
+    graph[name] = [r for r in dict.fromkeys(refs) if r in skills]
+
+# A cycle in the call graph is an agent that can be handed back to a skill it is
+# already inside. The "applies once per task" rule in .agents/conventions.md is
+# what makes the surviving ones safe, but a NEW one is a real loop risk, so the
+# known set is allowlisted by the single edge that closes it and anything else
+# fails. Fix a new cycle by reversing an edge (see "Chains run one direction"),
+# never by extending this list.
+KNOWN_BACK_EDGES = {
+    ("design-inspiration", "curate-design-inspiration"),
+    ("design-inspiration", "design-brief"),
+    ("security-hardening", "dependency-choice"),
+    ("security-hardening", "api-design"),
+    ("release-flow", "ship-flow"),
+}
+
+def find_cycles():
+    found, seen = [], set()
+    def walk(node, stack):
+        for nxt in graph.get(node, []):
+            if nxt in stack:
+                cycle = stack[stack.index(nxt):]
+                rotate = cycle.index(min(cycle))
+                found.append(tuple(cycle[rotate:] + cycle[:rotate]))
+            elif nxt not in seen:
+                seen.add(nxt)
+                walk(nxt, stack + [nxt])
+    for start in sorted(graph):
+        seen.add(start)
+        walk(start, [start])
+    return sorted(set(found), key=lambda c: (len(c), c))
+
+for cycle in find_cycles():
+    edges = list(zip(cycle, cycle[1:] + cycle[:1]))
+    if any(e in KNOWN_BACK_EDGES for e in edges):
+        continue
+    path = " -> ".join(cycle + cycle[:1])
+    errors.append(f"cross-skill call cycle: {path}. Reverse one edge so the chain "
+                  f"runs one direction, per .agents/conventions.md.")
+
+# Skills that emit code must end at the completion gate. The list is explicit
+# rather than inferred so that a new code-changing skill has to be added here
+# deliberately, instead of shipping ungated because nothing noticed.
+MUST_REACH_GATE = {
+    "create", "refactor", "migration", "forms", "frontend-craft", "api-design",
+    "state-management", "security-hardening", "observability", "design-tokens",
+    "perf-audit", "ship-flow", "release-flow", "testing-strategy",
+}
+for name in sorted(MUST_REACH_GATE):
+    if name not in skills:
+        errors.append(f"{name}: listed as code-changing in validate.py but is not a skill")
+    elif "verify-before-done" not in graph.get(name, []):
+        errors.append(f"{name}: changes code but never calls the Skill tool with "
+                      f"'verify-before-done'. Every skill that writes code ends at the gate.")
+
+# The gate is a sink. Anything it calls could route back into it, which the
+# cycle check would catch, but naming the rule here makes the failure legible.
+gate_calls = set(graph.get("verify-before-done", [])) - {"resolve-conventions"}
+if gate_calls:
+    errors.append(f"verify-before-done calls {sorted(gate_calls)}. It is the terminal gate "
+                  f"and must stay a sink; state the guidance inline instead.")
+
+# Payload blocks are spliced into a file the user owns, between markers. An
+# unbalanced pair means the splice has no end and would swallow their content.
+for payload in sorted((ROOT / "skills/foundation/setup-skills").glob("*-block.md")):
+    text = payload.read_text()
+    for marker in set(re.findall(r"jon-skills:([a-z-]+):(?:begin|end)", text)):
+        begins = text.count(f"jon-skills:{marker}:begin")
+        ends = text.count(f"jon-skills:{marker}:end")
+        if begins != 1 or ends != 1:
+            errors.append(f"{payload.relative_to(ROOT)}: marker '{marker}' appears "
+                          f"{begins} begin / {ends} end, expected exactly one of each.")
 
 # No silent external dependency. A bare `/name` for something this pack does not
 # ship reads as though the reader has it, which breaks the moment they do not.

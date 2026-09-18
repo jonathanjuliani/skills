@@ -1,6 +1,6 @@
 ---
 name: testing-strategy
-description: Decide what to test, at which seams, and with which kinds of tests (unit, integration, e2e) for a JS/TS/React/React Native project. Use when planning test coverage for a feature, deciding where a test belongs, or setting up a testing approach. Defers the runner and tools to resolve-conventions.
+description: Decide what to test, at which seams, and with which kinds of tests (unit, integration, e2e) for a JS/TS/React/React Native project. Use when planning test coverage for a feature, deciding where a test belongs, or setting up a testing approach. Defers the runner and tools to resolve-conventions. Not for proving that a suite actually ran and passed before a completion claim, which is verify-before-done.
 ---
 
 # Testing strategy
@@ -51,7 +51,7 @@ Once the seams are agreed, each test is written the same way, and writing the te
 2. **Watch it fail, and read the failure.** A test that passes before the code exists is asserting nothing, and a failure message you did not read may be failing for a reason you did not intend.
 3. **Write the least code that makes it pass.**
 4. **Watch it pass**, then run the rest of the suite to confirm nothing else moved.
-5. **Refactor with the test green**, if there is anything to clean up. Call the Skill tool with "refactor" for that discipline.
+5. **Refactor with the test green**, if there is anything to clean up. The `refactor` skill carries that discipline, and reaches back here for the pinning test, so treat this step as the handoff point rather than a second invocation.
 
 Then call the Skill tool with "verify-before-done" before reporting anything as covered.
 

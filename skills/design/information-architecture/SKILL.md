@@ -1,6 +1,6 @@
 ---
 name: information-architecture
-description: Define the structural layer of a product before visual design begins, covering content inventory, hierarchy, navigation model, screen and URL structure, naming, and the flows users take through it. Use when planning a new product area, when navigation has grown confusing, when users cannot find something, or before any visual work on a multi-screen surface.
+description: Define the structural layer of a product before visual design begins, covering content inventory, hierarchy, navigation model, screen and URL structure, naming, and the flows users take through it. Use when planning a new product area, when navigation has grown confusing, when users cannot find something, or before any visual work on a multi-screen surface. Not for the visual direction and audience read, which is design-brief, and not for how source files are laid out on disk, which is project-shape.
 ---
 
 # Information architecture

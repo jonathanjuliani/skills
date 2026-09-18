@@ -1,6 +1,6 @@
 ---
 name: resolve-conventions
-description: Resolve which tool or pattern a project should use (package manager, formatter, test runner, validation, folder layout, naming) by detecting the project first and deferring to it. Use when any task needs a stack or convention decision, before scaffolding, refactoring, adding a dependency, or setting up tooling, and whenever the right choice depends on what a project already uses.
+description: Resolve which tool or pattern a project should use (package manager, formatter, test runner, validation, folder layout, naming) by detecting the project first and deferring to it. Use when any task needs a stack or convention decision, before scaffolding, refactoring, adding a dependency, or setting up tooling, and whenever the right choice depends on what a project already uses. Not for deciding where code should live, which is project-shape, and not for judging whether to take on a new dependency at all, which is dependency-choice.
 ---
 
 # Resolve conventions

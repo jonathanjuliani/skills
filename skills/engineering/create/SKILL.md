@@ -1,6 +1,6 @@
 ---
 name: create
-description: Scaffold new JS/TS code (component, hook, module, package, service, endpoint, or screen) to a project's resolved conventions and shape. Use when the user wants to add or generate a new unit of code and it should match how the project is already built. Detects the stack first; recommends and asks on greenfield.
+description: Scaffold new JS/TS code (component, hook, module, package, service, endpoint, or screen) to a project's resolved conventions and shape. Use when the user wants to add or generate a new unit of code and it should match how the project is already built. Detects the stack first; recommends and asks on greenfield. Not for changing code that already exists, which is refactor, and not for adding a line inside a file that already answers every convention question by example.
 ---
 
 # Create

@@ -4,13 +4,18 @@ captured: 2026-09-11
 surface: product marketing with a live product canvas
 audience: product teams evaluating a dense issue tracker
 motion: purposeful
+motion_complexity: simple
+motion_types:
+  - transition
+  - scroll
 verify_after: 2027-03-11
 ---
 
 ## Taken
 
 - The product is the argument. A plausible issue, with real activity and labels, sits under a short headline so a buyer can judge density before they sign up.
-- List and detail on the same view. Navigation names places (Inbox, Issues, Reviews), the selected row is obvious, and the detail pane carries the work.
+- List and detail on the same view. Navigation names places (Inbox, Issues, Reviews), the selected row is obvious, and the detail pane carries the work. Row-to-detail is a short transition that keeps context, not a new page.
+- Scroll does not choreograph the marketing canvas. The issue list moves like a tool: native, interruptible, no pinned theatre. That restraint is the motion lesson for product UI.
 - Type is few sizes and two weights. Hierarchy comes from space and position, not from extra weights. One sans for UI, a mono only for code and timestamps.
 - Colour is almost all neutral. Hue is reserved for status and selection, which is how a dense tool stays scannable for hours.
 - Spacing is a 4/8 base with hairline gaps on chrome, not a unique gap per component. Corners stay small on chrome. Shadows lift panels; they are not decoration.

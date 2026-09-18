@@ -29,6 +29,28 @@ Express a dependency as an operative instruction to `Call the Skill tool with "<
 
 Shared reference material lives inside the skill that owns it. Other skills reach it by calling that skill, not by linking across folders.
 
+Three rules keep the call graph from becoming a loop. The graph is dense (over fifty edges across thirty-one skills) and it already contains cycles, so these are what make it safe rather than what keeps it acyclic:
+
+- **A skill applies once per task.** If its guidance is already in play, a second call is a no-op and not a re-entry. This is the rule that makes the remaining cycles survivable, and it is the one to state explicitly whenever a skill can be reached from two directions.
+- **Chains run one direction.** Where two skills genuinely need each other, one names the other operatively and the other mentions it as prose without the invocation phrase. `testing-strategy` and `refactor` are resolved this way: `refactor` calls `testing-strategy` for the pinning test, and `testing-strategy` names `refactor` as a handoff without calling it.
+- **Terminal gates are sinks.** `verify-before-done` is the only gate in the pack and fourteen skills call it, so nothing it calls may lead back to it. It reaches `resolve-conventions` for the project's commands and nothing else. Guidance it needs from another skill gets stated inline instead, which is why its test-lifecycle section does not call `testing-strategy`.
+
+`scripts/validate.py` detects cycles and carries an allowlist of the known ones. A new cycle is an error, so adding an edge that closes one means reversing an edge rather than extending the allowlist.
+
+## Description shape
+
+The `description` of a model-invoked skill is the only thing a router sees before deciding whether to open the file, so it is written for that decision and not as a summary. Three clauses, in this order:
+
+1. **The job**, in one clause. What the skill does, not how well.
+2. **`Use when ...`**, listing the situations that should trigger it. Situations the router can detect in a request, not qualities of the task ("when quality matters" triggers on nothing).
+3. **`Not for ...`**, naming the nearest neighbour and the boundary between them. This clause is what stops two skills with overlapping territory from being coin flips.
+
+The third clause is a **boundary, not a destination**. "Not for changing existing code, which is `refactor`" describes where the line falls. "Not for changing existing code, call `refactor` instead" is an operative instruction sitting in a router's context, and the mutual pair of those can hand a genuinely ambiguous case back and forth. Name the neighbour so a human reading the pack sees the split; phrase it so a router reads a negative filter.
+
+Keep colons out of the value or quote the whole string, since an unquoted colon silently turns the description into a mapping. `scripts/validate.py` checks for that and for the presence of `Use when`.
+
+User-invoked descriptions are human-facing and exempt: a one-line summary, no trigger list, no anti-trigger.
+
 ## Guardrails
 
 Rules alone do not survive contact with a model under pressure. Four guardrails make a skill hold under that pressure. Each carries a test for whether this skill needs it: add the ones that pass, never all four by default. A skill wearing guardrails it did not earn is noise, and noise is what gets skimmed.

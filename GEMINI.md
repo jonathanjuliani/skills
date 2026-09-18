@@ -4,4 +4,6 @@ Vendor-neutral engineering and delivery skills for JavaScript, TypeScript, React
 
 These skills never assume a stack. Before any tool or pattern choice, they resolve it in a fixed order: what the project already uses, then a company standard if the repo carries one, then a personal default, then the current community default offered as a recommendation and confirmed before it is applied. Detection always outranks a default.
 
-Reach for a skill when the task matches its description. When one skill names another, consult that skill before continuing.
+Reach for a skill when the task matches its description. Each description ends with what the skill is **not** for, naming the neighbour that owns that territory instead, so use that clause to settle which of two overlapping skills applies. When one skill names another, consult that skill before continuing, and treat a skill already applied in this task as done rather than re-entering it.
+
+Gemini loads this file rather than a skill registry, so the routing table is the fastest way in: it maps the recurring moments of a task to the skill that owns each one. It lives at `skills/foundation/setup-skills/routing-block.md`, and `/setup-skills` can copy it into a repo's own instructions file.

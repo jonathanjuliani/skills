@@ -1,6 +1,6 @@
 ---
 name: migration
-description: Remove or replace something a codebase still depends on, covering deprecation, incremental migration to a new library or pattern, and deleting code nobody uses. Use when sunsetting a feature, upgrading across a breaking major version, replacing a dependency or an internal API, or clearing out code that looks dead.
+description: Remove or replace something a codebase still depends on, covering deprecation, incremental migration to a new library or pattern, and deleting code nobody uses. Use when sunsetting a feature, upgrading across a breaking major version, replacing a dependency or an internal API, or clearing out code that looks dead. Not for restructuring code that is staying, which is refactor, and not for removing something with no callers left, which is just a deletion.
 ---
 
 # Migration
@@ -70,3 +70,7 @@ The shape yields where the old and new genuinely cannot coexist, which happens w
 ## Before you hand it over
 
 Check for the three residues a migration leaves when it stops early: the old dependency still in `package.json` after its last caller went, tests and fixtures still covering the removed path, and documentation still describing the old way as current. Then say plainly which step the migration is at, since "migrated" and "both still exist" are routinely reported as the same thing.
+
+The suite has to move with the code. Behavior that survives the migration needs a test at its new home before the old one is deleted, or the contract step quietly drops its only guarantee. Call the Skill tool with "testing-strategy" for where those tests belong.
+
+Then call the Skill tool with "verify-before-done", because "migrated" is the claim most often made while both things are still in the tree.

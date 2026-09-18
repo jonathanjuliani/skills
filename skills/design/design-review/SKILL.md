@@ -1,6 +1,6 @@
 ---
 name: design-review
-description: Critique an interface against usability heuristics and its own design read, scoring each finding and ranking by user impact so the output is an actionable list rather than an opinion. Use when reviewing a screen or flow, when asked whether a UI is any good, before shipping a user-facing change, or when an interface works but feels wrong and nobody can say why.
+description: Critique an interface against usability heuristics and its own design read, scoring each finding and ranking by user impact so the output is an actionable list rather than an opinion. Use when reviewing a screen or flow, when asked whether a UI is any good, before shipping a user-facing change, or when an interface works but feels wrong and nobody can say why. Not for building or fixing the component itself, which is frontend-craft, and not for the static and computed accessibility failures a linter or axe should already gate.
 ---
 
 # Design review

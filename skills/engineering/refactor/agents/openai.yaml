@@ -1,3 +1,3 @@
 interface:
   display_name: "Refactor"
-  short_description: "Behavior-preserving refactor toward project conventions"
+  short_description: "Restructure existing code without changing what it does"

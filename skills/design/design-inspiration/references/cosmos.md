@@ -3,6 +3,10 @@ source: https://www.cosmos.so
 captured: 2026-09-11
 surface: editorial product marketing
 audience: creatives collecting visual references
+motion: cinematic
+motion_complexity: medium
+motion_types:
+  - image
 verify_after: 2027-03-11
 ---
 
@@ -12,6 +16,7 @@ verify_after: 2027-03-11
 - One primary action (Get the app). Watching the film is secondary and named as a film, not as a second conversion.
 - Colour is mostly paper-neutral. The photographs carry hue, so the chrome does not have to.
 - Copy is short. The product is a space for taste; the page does not explain taste in a paragraph.
+- Media is the motion. Cards and film move as proof of a library, which is why image motion here explains the product rather than decorating a headline.
 
 ## Rejected
 

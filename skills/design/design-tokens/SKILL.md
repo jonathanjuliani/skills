@@ -1,6 +1,6 @@
 ---
 name: design-tokens
-description: Establish or adopt a token system so design decisions live in one place instead of being retyped, covering naming by role, both themes from the start, the scales, and how to migrate a codebase that hardcodes values today. Use when starting a design system, adding a theme, replacing scattered literal values, or turning an extracted or chosen direction into something buildable.
+description: Establish or adopt a token system so design decisions live in one place instead of being retyped, covering naming by role, both themes from the start, the scales, and how to migrate a codebase that hardcodes values today. Use when starting a design system, adding a theme, replacing scattered literal values, or turning an extracted or chosen direction into something buildable. Not for deciding what the direction should be in the first place, which is design-brief, and not for a single component or a prototype where literals are correct.
 ---
 
 # Design tokens
@@ -74,3 +74,5 @@ Where the project has a system that is genuinely bad, that is its own piece of w
 ## Before you hand it over
 
 Check the system for the three failures that make it decorative: a token named for its value rather than its job, a component reaching past the semantic layer to a primitive, and a colour pair that was never checked in the second theme.
+
+Then call the Skill tool with "verify-before-done", because replacing literals with tokens touches far more files than it appears to, and a build that still compiles is not evidence that every swapped value landed on the right one.

@@ -1,6 +1,6 @@
 ---
 name: ts-standards
-description: JS/TS conventions reference for writing and reviewing code, covering naming, types vs interfaces, error handling, module boundaries, validation at edges, and async patterns. Use when writing new TypeScript, reviewing code for quality, or deciding how to structure types and modules. Defers concrete tool choices to resolve-conventions and to any project or company standard.
+description: JS/TS conventions reference for writing and reviewing code, covering naming, types vs interfaces, error handling, module boundaries, validation at edges, and async patterns. Use when writing new TypeScript, reviewing code for quality, or deciding how to structure types and modules. Defers concrete tool choices to resolve-conventions and to any project or company standard. Not for which tool a project uses, which is resolve-conventions, and not for restructuring existing code as a task in its own right, which is refactor.
 ---
 
 # TypeScript standards

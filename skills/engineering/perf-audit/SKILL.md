@@ -1,6 +1,6 @@
 ---
 name: perf-audit
-description: Audit and improve performance of a JS/TS backend, React web app, or React Native app. Use when something is slow, a page or screen janks, a bundle is too big, or an endpoint is over budget. Measures before changing, fixes the dominant cost first, and re-measures.
+description: Audit and improve performance of a JS/TS backend, React web app, or React Native app. Use when something is slow, a page or screen janks, a bundle is too big, or an endpoint is over budget. Measures before changing, fixes the dominant cost first, and re-measures. Not for instrumenting a system so production questions can be answered later, which is observability, and not for restructuring code that is fast enough, which is refactor.
 ---
 
 # Performance audit

@@ -1,6 +1,6 @@
 ---
 name: project-shape
-description: Determine whether a project is a single repo, a monorepo, or a modular single-deployable, and recommend folder and structure best practices per surface (backend, frontend, mobile) for JS/TS/React/React Native. Use when starting a project, adding a package or module, reorganizing folders, or deciding where new code should live.
+description: Determine whether a project is a single repo, a monorepo, or a modular single-deployable, and recommend folder and structure best practices per surface (backend, frontend, mobile) for JS/TS/React/React Native. Use when starting a project, adding a package or module, reorganizing folders, or deciding where new code should live. Not for choosing which tools a project uses, which is resolve-conventions, and not for writing the unit that goes in the folder, which is create.
 ---
 
 # Project shape

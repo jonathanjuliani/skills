@@ -1,6 +1,6 @@
 ---
 name: observability
-description: Instrument a JS/TS backend, React web app, or React Native app so questions about production can be answered, covering structured logging, metrics, tracing, error tracking, and alerting on symptoms. Use when adding telemetry, shipping something that runs in production, debugging an incident with no data, or setting up alerts.
+description: Instrument a JS/TS backend, React web app, or React Native app so questions about production can be answered, covering structured logging, metrics, tracing, error tracking, and alerting on symptoms. Use when adding telemetry, shipping something that runs in production, debugging an incident with no data, or setting up alerts. Not for diagnosing and fixing a specific slow path you can already measure, which is perf-audit, and not for the rollout and rollback mechanics of a deploy, which is ship-flow.
 ---
 
 # Observability
@@ -66,3 +66,5 @@ The shape survives where the rule yields. On something that may later go to prod
 ## Before you hand it over
 
 Check the change for the three gaps that surface during the first incident: a failure path that emits nothing, a log line carrying something sensitive, and a new operation with no way to tell whether it is working in aggregate.
+
+Then call the Skill tool with "verify-before-done", because instrumentation is uniquely easy to declare finished without running: the code compiles, the logger is imported, and nobody finds out the field was never populated until the incident it was added for.

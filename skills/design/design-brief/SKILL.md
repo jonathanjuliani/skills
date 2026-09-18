@@ -1,6 +1,6 @@
 ---
 name: design-brief
-description: Establish what an interface should be and for whom before anything visual is decided, covering the surface kind, the audience, the references, the dials, and the constraints that override taste. Use when starting a design, redesigning something, picking a visual direction, or when a request arrives with no stated direction at all.
+description: Establish what an interface should be and for whom before anything visual is decided, covering the surface kind, the audience, the references, the dials, and the constraints that override taste. Use when starting a design, redesigning something, picking a visual direction, or when a request arrives with no stated direction at all. Not for the content, navigation and screen structure underneath the direction, which is information-architecture, and not for building the result in code, which is frontend-craft.
 ---
 
 # Design brief

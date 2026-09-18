@@ -1,6 +1,6 @@
 ---
 name: release-flow
-description: Set up or run a versioning and release process for a JS/TS package, app, or monorepo (versioning, changelog, publishing). Use when the user is cutting a release, setting up release automation, or deciding on a versioning scheme. Defers to any process the project already has and to resolve-conventions.
+description: Set up or run a versioning and release process for a JS/TS package, app, or monorepo (versioning, changelog, publishing). Use when the user is cutting a release, setting up release automation, or deciding on a versioning scheme. Defers to any process the project already has and to resolve-conventions. Not for how a change reaches production, its pipeline, flags, or rollout, which is ship-flow.
 ---
 
 # Release flow

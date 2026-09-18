@@ -1,6 +1,6 @@
 ---
 name: dependency-choice
-description: Decide whether to add a dependency and, if so, which one, judged against current community adoption and project fit. Use when the user is about to install a package, is choosing between libraries, or asks "what should I use for X". Checks current adoption on the web when available and defers to what the project already uses.
+description: Decide whether to add a dependency and, if so, which one, judged against current community adoption and project fit. Use when the user is about to install a package, is choosing between libraries, or asks "what should I use for X". Checks current adoption on the web when available and defers to what the project already uses. Not for detecting which tool a project has already settled on, which is resolve-conventions, and not for removing a dependency that is on its way out, which is migration.
 ---
 
 # Dependency choice

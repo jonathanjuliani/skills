@@ -1,6 +1,6 @@
 ---
 name: curate-design-inspiration
-description: "Populate or refresh the design-inspiration store from curated gallery sites by discovering categories, picking live project examples, and writing capture.md entries after user confirmation. Use when the inspiration base is thin or not enough for the current surface and audience, when the user asks to populate, update, or curate design inspiration from galleries, or when design-inspiration finds too few relevant store entries."
+description: "Populate or refresh the design-inspiration store from curated gallery sites by discovering categories, picking live project examples, and writing capture.md entries after user confirmation. Use when the inspiration base is thin or not enough for the current surface and audience, when the user asks to populate, update, or curate design inspiration from galleries, or when design-inspiration finds too few relevant store entries. Not for reading a single reference the user already named or linked, which is design-inspiration."
 ---
 
 # Curate design inspiration

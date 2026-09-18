@@ -1,3 +1,3 @@
 interface:
   display_name: "Create"
-  short_description: "Scaffold new code to the project's resolved conventions"
+  short_description: "Scaffold a new unit to the project's conventions, not edit an existing one"

@@ -11,8 +11,8 @@ Aim for at least two or three relevant entries per archetype before reaching for
 | Archetype | Seed files |
 | --- | --- |
 | Text-led landing | [gov-uk.md](gov-uk.md), [pear.md](pear.md), [resend.md](resend.md), [cloaked.md](cloaked.md), [openclaw.md](openclaw.md), [xerx.md](xerx.md), [dondi-bogusky.md](dondi-bogusky.md), [neon.md](neon.md), [reapi.md](reapi.md), [localcan.md](localcan.md), [papermark.md](papermark.md), [rerun.md](rerun.md) |
-| Product-led landing | [linear.md](linear.md), [formable.md](formable.md), [auctor.md](auctor.md), [superpower.md](superpower.md), [github.md](github.md), [amie.md](amie.md), [taito.md](taito.md), [mezmo.md](mezmo.md), [coderabbit.md](coderabbit.md) |
-| Asymmetric landing | [loom.md](loom.md), [stripe.md](stripe.md), [apple.md](apple.md) |
+| Product-led landing | [linear.md](linear.md), [formable.md](formable.md), [auctor.md](auctor.md), [superpower.md](superpower.md), [github.md](github.md), [amie.md](amie.md), [taito.md](taito.md), [mezmo.md](mezmo.md), [coderabbit.md](coderabbit.md), [rive.md](rive.md), [framer.md](framer.md), [clerk.md](clerk.md), [webflow.md](webflow.md), [duolingo.md](duolingo.md) |
+| Asymmetric landing | [loom.md](loom.md), [stripe.md](stripe.md), [apple.md](apple.md), [apple-iphone.md](apple-iphone.md), [apple-vision-pro.md](apple-vision-pro.md) |
 | Panel grid | [raycast.md](raycast.md), [vercel.md](vercel.md), [moonb.md](moonb.md), [wiz.md](wiz.md) |
 | Editorial | [whole-earth-index.md](whole-earth-index.md), [cosmos.md](cosmos.md), [sarah-zaheer.md](sarah-zaheer.md), [rome-michal.md](rome-michal.md), [making-software.md](making-software.md), [openclaw-blog.md](openclaw-blog.md) |
 | List and detail | [github-issues.md](github-issues.md), [product-hunt.md](product-hunt.md), [lobsters.md](lobsters.md), [hacker-news.md](hacker-news.md), [the-index.md](the-index.md), [openclaw-blog.md](openclaw-blog.md), [coderabbit.md](coderabbit.md) |
@@ -24,13 +24,25 @@ Marketing-only relatives (useful, but not the pure app archetype): [are-na.md](a
 
 ## By motion (motion.md)
 
-Independent of archetype. Tag new captures with `motion:` when the read is clear.
+Independent of archetype. Intensity is how loud the motion is. Complexity and type are a separate lookup: when the user asks for more motion on a surface, filter the type-by-complexity matrix against the brief, then open those files.
 
-| Level | Seed files |
+| Intensity | Seed files |
 | --- | --- |
 | Minimal | [gov-uk.md](gov-uk.md), [hacker-news.md](hacker-news.md), [github-issues.md](github-issues.md), [product-hunt.md](product-hunt.md), [lobsters.md](lobsters.md), [cal-booking.md](cal-booking.md), [github-signup.md](github-signup.md), [openclaw-blog.md](openclaw-blog.md), [making-software.md](making-software.md), [the-index.md](the-index.md), [reapi.md](reapi.md), [caniuse.md](caniuse.md), [neon.md](neon.md), [dondi-bogusky.md](dondi-bogusky.md), [papermark.md](papermark.md), [rerun.md](rerun.md) |
-| Purposeful | [linear.md](linear.md), [stripe-checkout.md](stripe-checkout.md), [tldraw.md](tldraw.md), [excalidraw.md](excalidraw.md), [diagrams-net.md](diagrams-net.md), [photopea.md](photopea.md), [openclaw.md](openclaw.md), [mezmo.md](mezmo.md), [wiz.md](wiz.md), [amie.md](amie.md), [taito.md](taito.md), [xerx.md](xerx.md), [bun.md](bun.md), [coderabbit.md](coderabbit.md), [localcan.md](localcan.md) |
-| Cinematic | [eclipse-space.md](eclipse-space.md), [seasats.md](seasats.md), [runway.md](runway.md) |
+| Purposeful | [linear.md](linear.md), [stripe-checkout.md](stripe-checkout.md), [tldraw.md](tldraw.md), [excalidraw.md](excalidraw.md), [diagrams-net.md](diagrams-net.md), [photopea.md](photopea.md), [openclaw.md](openclaw.md), [mezmo.md](mezmo.md), [wiz.md](wiz.md), [amie.md](amie.md), [taito.md](taito.md), [xerx.md](xerx.md), [bun.md](bun.md), [coderabbit.md](coderabbit.md), [localcan.md](localcan.md), [rive.md](rive.md), [pinterest.md](pinterest.md), [framer.md](framer.md), [clerk.md](clerk.md), [anthropic.md](anthropic.md), [airbnb.md](airbnb.md), [lenis.md](lenis.md), [duolingo.md](duolingo.md), [webflow.md](webflow.md), [nothing.md](nothing.md) |
+| Cinematic | [eclipse-space.md](eclipse-space.md), [seasats.md](seasats.md), [runway.md](runway.md), [apple.md](apple.md), [apple-iphone.md](apple-iphone.md), [apple-vision-pro.md](apple-vision-pro.md), [cosmos.md](cosmos.md), [gsap.md](gsap.md), [basement.md](basement.md), [dennissnellenberg.md](dennissnellenberg.md), [locomotive.md](locomotive.md), [lusion.md](lusion.md), [bruno-simon.md](bruno-simon.md), [landonorris.md](landonorris.md), [obys.md](obys.md), [cuberto.md](cuberto.md), [activetheory.md](activetheory.md) |
+
+### By type × complexity
+
+Open the file. A capture can appear in more than one cell when the live read was distinctive for each type.
+
+| Type | Simple | Medium | High |
+| --- | --- | --- | --- |
+| Loading | [rive.md](rive.md), [airbnb.md](airbnb.md) | [duolingo.md](duolingo.md), [webflow.md](webflow.md) | [lusion.md](lusion.md), [bruno-simon.md](bruno-simon.md) |
+| Transition | [framer.md](framer.md), [clerk.md](clerk.md), [linear.md](linear.md) | [basement.md](basement.md), [dennissnellenberg.md](dennissnellenberg.md) | [landonorris.md](landonorris.md), [lusion.md](lusion.md) |
+| Text | [gsap.md](gsap.md), [anthropic.md](anthropic.md) | [locomotive.md](locomotive.md), [dennissnellenberg.md](dennissnellenberg.md) | [obys.md](obys.md), [cuberto.md](cuberto.md) |
+| Image | [airbnb.md](airbnb.md), [pinterest.md](pinterest.md), [runway.md](runway.md) | [nothing.md](nothing.md), [cosmos.md](cosmos.md), [apple.md](apple.md), [apple-iphone.md](apple-iphone.md), [eclipse-space.md](eclipse-space.md), [seasats.md](seasats.md) | [activetheory.md](activetheory.md), [bruno-simon.md](bruno-simon.md) |
+| Scroll | [lenis.md](lenis.md), [linear.md](linear.md) | [locomotive.md](locomotive.md), [apple-iphone.md](apple-iphone.md), [eclipse-space.md](eclipse-space.md), [seasats.md](seasats.md) | [landonorris.md](landonorris.md), [apple-vision-pro.md](apple-vision-pro.md) |
 
 ## Full provenance index
 
@@ -38,6 +50,8 @@ Independent of archetype. Tag new captures with `motion:` when the read is clear
 | --- | --- | --- |
 | [linear.md](linear.md) | product marketing with live product canvas | product teams evaluating a dense issue tracker |
 | [apple.md](apple.md) | consumer product marketing homepage | shoppers comparing a device they already know |
+| [apple-iphone.md](apple-iphone.md) | product-family marketing with a film of the device | shoppers comparing iPhone models they already know |
+| [apple-vision-pro.md](apple-vision-pro.md) | hardware product page where scroll is a film of the device | shoppers deciding whether spatial computing is a real product |
 | [gov-uk.md](gov-uk.md) | public-sector service directory | residents looking for a specific government task |
 | [figma.md](figma.md) | canvas-tool marketing homepage | design and product teams choosing a collaborative canvas |
 | [notion.md](notion.md) | workspace marketing, and the login wall it currently serves | knowledge-work teams, then returning users signing in |
@@ -105,3 +119,23 @@ Independent of archetype. Tag new captures with `motion:` when the read is clear
 | [papermark.md](papermark.md) | open-source VDR marketing with agent and docs-first structure | founders, funds, and advisors running permissioned deal rooms |
 | [rerun.md](rerun.md) | technical data-layer docs and product home for Physical AI | robotics and multimodal AI teams inspecting, querying, and training on sensor data |
 | [localcan.md](localcan.md) | text-led developer tunneling tool marketing | developers, designers, and agents sharing localhost without deploying |
+| [rive.md](rive.md) | motion-runtime product marketing with a live example reel | designers and engineers choosing how to ship interactive graphics |
+| [pinterest.md](pinterest.md) | consumer inspiration marketing with product frames of photo grids | people collecting visual ideas before they log in |
+| [framer.md](framer.md) | design-tool marketing with a live canvas demo | teams deciding whether to design and publish a site in one product |
+| [clerk.md](clerk.md) | auth-component marketing with live sign-in and profile previews | developers embedding user management instead of building it |
+| [gsap.md](gsap.md) | animation-library marketing that uses type as the demo | developers and motion designers choosing a timeline tool |
+| [anthropic.md](anthropic.md) | research-lab marketing homepage with rearranging headline type | enterprises and researchers deciding whether this lab's models and safety story fit |
+| [airbnb.md](airbnb.md) | marketplace home with listing cards and skeleton first paint | travelers scanning places to stay in a city they already have in mind |
+| [lenis.md](lenis.md) | smooth-scroll library marketing that uses scroll as the demo | developers and studios adding controllable scroll to a site |
+| [duolingo.md](duolingo.md) | consumer learning marketing with a character as the product | people deciding to start a language habit |
+| [webflow.md](webflow.md) | site-platform marketing with live product panels | marketing and site teams choosing a web platform |
+| [basement.md](basement.md) | studio marketing with a 3D lobby and a human or machine mode | ambitious startups hiring a digital studio |
+| [dennissnellenberg.md](dennissnellenberg.md) | designer-developer portfolio with a greeting preloader and portrait hero | hiring managers scanning a freelancer in seconds |
+| [locomotive.md](locomotive.md) | digital-agency marketing with scramble-text entrance and photography hero | brands hiring a digital-first studio |
+| [nothing.md](nothing.md) | hardware commerce homepage with full-bleed product photography | shoppers comparing phones, earbuds, and headphones |
+| [lusion.md](lusion.md) | studio marketing that loads as a 3D world | brands hiring a WebGL-first digital studio |
+| [bruno-simon.md](bruno-simon.md) | developer portfolio that is a playable 3D world | hiring managers and peers judging a creative technologist |
+| [landonorris.md](landonorris.md) | athlete brand site with a named load into a 3D portrait | fans and partners entering a driver's world |
+| [obys.md](obys.md) | studio marketing with oversized type and a reconfigurable work column | brands hiring a digital studio for campaign and site craft |
+| [cuberto.md](cuberto.md) | studio marketing with a still headline over a moving work collage | companies hiring a product and brand studio |
+| [activetheory.md](activetheory.md) | studio marketing that is a 3D object in a particle field | brands hiring a campaign and WebGL studio |

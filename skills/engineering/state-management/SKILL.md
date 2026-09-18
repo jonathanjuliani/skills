@@ -1,6 +1,6 @@
 ---
 name: state-management
-description: Decide how state should be managed in a React or React Native app, separating server state from client state and choosing the right tool for each. Use when the user is adding state, sees prop-drilling or sync bugs, or asks which state library to use. Defers library choices to resolve-conventions.
+description: Decide how state should be managed in a React or React Native app, separating server state from client state and choosing the right tool for each. Use when the user is adding state, sees prop-drilling or sync bugs, or asks which state library to use. Defers library choices to resolve-conventions. Not for how a component is composed or made accessible, which is frontend-craft, and not for a single value owned by one component that nothing else reads.
 ---
 
 # State management
@@ -41,3 +41,9 @@ Forms are their own category: use the project's form library with schema validat
 ## When this does not apply
 
 A single boolean owned by one component needs no classification. Skip this where the state is plainly local and nothing shares it, and skip the tool choice entirely where the project has one settled pattern for the role. Follow that pattern instead.
+
+## Before you hand it over
+
+State bugs are the ones least visible in a rendered screen, because the wrong value looks exactly like the right one until the second interaction. Pin the transitions the classification turned on: what the component does when the server state is still loading, and what it does when two sources disagree. Call the Skill tool with "testing-strategy" for the seam those belong at.
+
+Then call the Skill tool with "verify-before-done", because a re-render that looks correct is not evidence that the state it came from is.

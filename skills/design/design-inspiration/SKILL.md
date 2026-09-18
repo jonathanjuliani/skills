@@ -1,6 +1,6 @@
 ---
 name: design-inspiration
-description: Take a design reference apart and reuse what makes it work without copying it, covering how to read a site or screenshot for its underlying decisions, how to extract a token set from a live page, and which patterns are conventions rather than one product's signature. Use when the user names a product to look like, links a site, pastes a screenshot, or asks for a direction based on something they admire.
+description: Take a design reference apart and reuse what makes it work without copying it, covering how to read a site or screenshot for its underlying decisions, how to extract a token set from a live page, and which patterns are conventions rather than one product's signature. Use when the user names a product to look like, links a site, pastes a screenshot, or asks for a direction based on something they admire. Not for growing the reference store from galleries in bulk, which is curate-design-inspiration, and not for turning a chosen direction into a token system, which is design-tokens.
 ---
 
 # Design inspiration
@@ -26,7 +26,7 @@ Work from the surface inward, and write down what you find as convention rather 
 3. **Density and rhythm.** How much sits in a given area, and whether the spacing follows a visible scale.
 4. **Type.** How many sizes and weights are actually in use. Restrained interfaces use far fewer than people expect.
 5. **Colour discipline.** How much of the surface is neutral, and what colour is reserved for.
-6. **Motion.** What moves, what it explains, and how long it takes. Assign a level from [motion.md](motion.md): **minimal**, **purposeful**, or **cinematic**.
+6. **Motion.** What moves, what it explains, and how long it takes. Assign intensity from [motion.md](motion.md): **minimal**, **purposeful**, or **cinematic**. When the motion is the reason for the read, also tag **complexity** (simple, medium, high) and **types** (loading, transition, text, image, scroll). When the user asks for more motion on a surface, filter the seed matrix in [references/README.md](references/README.md) against the brief, then open those files.
 7. **Copy.** Whether it is specific or generic. Specificity is a design property, and it is usually the thing that makes a reference feel credible.
 
 Then state the transferable finding in one line each: "type is two weights and four sizes, no more", not "headings are 34px Inter Semibold".
@@ -54,7 +54,7 @@ Offer this rather than doing it silently, and check both stores before a new rea
 
 The most useful distinction in this skill. A **convention** is a pattern so widespread that departing from it costs the user; reuse it freely. A **signature** is one product's recognisable choice; reusing it is imitation.
 
-[patterns.md](patterns.md) records the conventions worth reusing, the archetypes worth choosing between, and the things mature interfaces reliably avoid. Read the last section first: it is the highest-signal part, and it is mostly a list of what generated interfaces do that shipped ones do not. [motion.md](motion.md) is the parallel axis for how much the interface moves: layout archetypes and motion levels are chosen independently.
+[patterns.md](patterns.md) records the conventions worth reusing, the archetypes worth choosing between, and the things mature interfaces reliably avoid. Read the last section first: it is the highest-signal part, and it is mostly a list of what generated interfaces do that shipped ones do not. [motion.md](motion.md) is the parallel axis for how the interface moves: intensity, complexity, and type are chosen independently of the layout archetype.
 
 ## Rules
 

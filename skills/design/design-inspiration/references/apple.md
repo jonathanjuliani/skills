@@ -3,12 +3,18 @@ source: https://www.apple.com
 captured: 2026-09-11
 surface: consumer product marketing homepage
 audience: shoppers comparing a device they already know
+motion: cinematic
+motion_complexity: medium
+motion_types:
+  - image
 verify_after: 2027-03-11
 ---
 
 ## Taken
 
 - Photography of the real object, then a short product name, then one specific claim. The object does the selling; chrome is almost absent.
+- Motion is the device, not the chrome. Each block is one product as a still or a short film; the nav does not animate independently of the object.
+- Entertainment tiles carry a play control. Media that the user can start is the difference between a product story and a trap.
 - Claims that can be checked carry footnotes. Specificity includes the caveat, which is how a trust-first commerce page stays honest.
 - Two actions per product, ranked: learn more, then buy or pre-order. They are not equal.
 - Type is a handful of sizes and three weights, one family in two optical cuts (display for the product name, text for the rest). The product name is the loudest thing on each block; body stays quiet.

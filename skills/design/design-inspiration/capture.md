@@ -22,6 +22,9 @@ captured: 2026-09-14
 surface: marketing pricing page
 audience: procurement committee comparing vendors
 motion: purposeful
+motion_complexity: simple
+motion_types:
+  - transition
 verify_after: 2027-03-14
 ---
 
@@ -48,7 +51,7 @@ Three sections, and the middle one carries half the value. **Rejected** is what 
 - **Findings, never measurements.** "Two weights, four sizes" transfers to any project. "34px Inter Semibold" transfers to none. A file full of pixel values is a museum of somebody else's CSS.
 - **Identity never enters the store.** Logos, wordmarks, a signature brand hue, a distinctive illustration style, a named signature layout. This is the convention-versus-signature line from the parent skill, applied as a filter at write time rather than as advice at read time. A stored signature will eventually be applied by someone who has forgotten where it came from.
 - **Always record the read it came from.** A finding without its surface and audience is unusable later, because you cannot tell whether it applies. This is why `surface` and `audience` are required fields.
-- **Tag motion when the read is clear.** Optional frontmatter `motion: minimal | purposeful | cinematic` (see [motion.md](motion.md)). Omit it when motion is not distinctive; do not invent a level to fill the field.
+- **Tag motion when the read is clear.** Optional frontmatter `motion: minimal | purposeful | cinematic` for intensity, `motion_complexity: simple | medium | high` for implementation difficulty, and `motion_types` as a YAML list of `loading`, `transition`, `text`, `image`, `scroll` (see [motion.md](motion.md)). Omit any of these when that axis is not distinctive; do not invent tags to fill the fields. Intensity and complexity are independent: a short fade can be cinematic if it is the first impression, and a WebGL wait can be high complexity while staying purposeful.
 - **Date it and set a reverification trigger.** Convention drifts. An undated store becomes confidently wrong, which is worse than a dated snapshot that admits what it is. Six months is a reasonable default; shorter for anything fast-moving.
 - **One reference per file, named for the source.** Merging references loses the provenance that makes the store trustworthy.
 
@@ -56,7 +59,7 @@ Three sections, and the middle one carries half the value. **Rejected** is what 
 
 Before a design read, look for entries whose `surface` and `audience` resemble the one in front of you. Check the personal store first, then the shipped seed. Two or three relevant entries beat the whole store, and an entry from a different audience is evidence about that audience, not this one.
 
-The shipped seed has a provenance index at [references/README.md](references/README.md): source, surface, audience only. Use it to find the files to open, not as a substitute for reading them. The personal store stays unindexed until scanning it costs more than reading it.
+The shipped seed has a provenance index at [references/README.md](references/README.md): source, surface, audience, plus a type-by-complexity motion matrix. Use it to find the files to open, not as a substitute for reading them. When the user asks for more motion on a surface, filter that matrix against the brief, then open those files. The personal store stays unindexed until scanning it costs more than reading it.
 
 Say when a recommendation came from the store and from which entry, the same way `resolve-conventions` names the tier a decision came from. A recommendation whose source is invisible cannot be argued with.
 

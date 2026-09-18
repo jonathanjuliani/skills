@@ -1,6 +1,6 @@
 ---
 name: ship-flow
-description: Get a change from a working tree to production safely, covering commit and branch discipline, change size, CI as a quality gate, feature flags, staged rollout, and a rollback path. Use when setting up or fixing a pipeline, planning how a risky change reaches users, deciding how to split work into commits or pull requests, or preparing a deploy.
+description: Get a change from a working tree to production safely, covering commit and branch discipline, change size, CI as a quality gate, feature flags, staged rollout, and a rollback path. Use when setting up or fixing a pipeline, planning how a risky change reaches users, deciding how to split work into commits or pull requests, or preparing a deploy. Not for version numbers, changelogs, or publishing a package, which is release-flow.
 ---
 
 # Ship flow

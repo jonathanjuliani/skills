@@ -1,6 +1,6 @@
 ---
 name: agent-instructions
-description: Write or improve a repository's agent instructions file (AGENTS.md or CLAUDE.md) so the rules in it are actually followed. Use when the user wants to create, review, shorten, or fix one, when instructions in it are being ignored, when onboarding a repo for agents, or when a rule keeps having to be repeated in conversation.
+description: Write or improve a repository's agent instructions file (AGENTS.md or CLAUDE.md) so the rules in it are actually followed. Use when the user wants to create, review, shorten, or fix one, when instructions in it are being ignored, when onboarding a repo for agents, or when a rule keeps having to be repeated in conversation. Not for recording which tools a project uses, which is resolve-conventions, and not for the one-time per-repo setup of this pack, which is the user-invoked setup-skills.
 ---
 
 # Agent instructions

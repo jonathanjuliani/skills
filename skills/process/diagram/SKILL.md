@@ -1,6 +1,6 @@
 ---
 name: diagram
-description: Choose the right diagram or visual for what is being explained and render it. Use when an explanation involves a flow, a sequence of interactions, a data model, a system's structure, a state machine, a schedule or phases, a hierarchy, or a comparison, and words alone would be harder to follow than a picture.
+description: Choose the right diagram or visual for what is being explained and render it. Use when an explanation involves a flow, a sequence of interactions, a data model, a system's structure, a state machine, a schedule or phases, a hierarchy, or a comparison, and words alone would be harder to follow than a picture. Not for deciding a product's navigation and screen structure, which is information-architecture, and not for a point a single sentence already carries.
 ---
 
 # Diagram

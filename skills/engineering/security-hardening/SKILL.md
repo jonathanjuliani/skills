@@ -1,6 +1,6 @@
 ---
 name: security-hardening
-description: Find where untrusted data or untrusted actors reach something that matters in a JS/TS backend, React web app, or React Native app, and put the right control there. Use when adding authentication or authorization, handling user input, storing or logging sensitive data, integrating an external service, reviewing code for vulnerabilities, or hardening before a launch.
+description: Find where untrusted data or untrusted actors reach something that matters in a JS/TS backend, React web app, or React Native app, and put the right control there. Use when adding authentication or authorization, handling user input, storing or logging sensitive data, integrating an external service, reviewing code for vulnerabilities, or hardening before a launch. Not for shaping the contract a payload arrives through, which is api-design, and not for judging the supply-chain risk of a package you are about to add, which is dependency-choice.
 ---
 
 # Security hardening
@@ -64,3 +64,7 @@ The shape survives where the rule yields. On a prototype that may later ship, sa
 ## Before you hand it over
 
 Check the change for the three findings that most often survive a security pass: an endpoint that authenticates but never authorizes the specific object, a value that reaches a query or a command without going through a schema first, and something sensitive that is now in a log, an error response, or a client bundle.
+
+A control nobody tested is a control nobody will notice the removal of, and access checks are removed by accident more often than they are defeated. Pin the negative cases: the wrong user denied, the malformed input rejected. Call the Skill tool with "testing-strategy" for where those sit.
+
+Then call the Skill tool with "verify-before-done", because "hardened" is a claim about paths you did not take, and only the tests you ran say anything about those.

@@ -1,6 +1,6 @@
 ---
 name: frontend-craft
-description: Build React and React Native interfaces in code that are well composed and accessible, covering component boundaries, props, and the accessibility obligations that hold at every visual choice. Use when creating or changing UI, building a component or screen, or reviewing component structure and accessibility. Takes the visual direction from design-brief and defers library choices to resolve-conventions.
+description: Build React and React Native interfaces in code that are well composed and accessible, covering component boundaries, props, and the accessibility obligations that hold at every visual choice. Use when creating or changing UI, building a component or screen, or reviewing component structure and accessibility. Takes the visual direction from design-brief and defers library choices to resolve-conventions. Not for judging whether the resulting interface is any good, which is design-review, and not for a form's validation and error-recovery behavior, which is forms.
 ---
 
 # Frontend craft
@@ -62,3 +62,5 @@ The accessibility obligations do not have an exception. They are the part that y
 Check the interface for the three failures that most often survive: a control that cannot be reached or operated by keyboard, an input whose only label is its placeholder, and a component that grew a new boolean prop instead of being split.
 
 For anything user-facing that is about to ship, call the Skill tool with "design-review" for a scored pass. This check covers the three failures of this skill's own output; that one judges whether the interface is any good.
+
+Then call the Skill tool with "verify-before-done", because a component that renders in front of you is the weakest possible evidence that it still builds, still type-checks, and still passes the tests around it.

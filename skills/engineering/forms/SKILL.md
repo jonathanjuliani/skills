@@ -1,6 +1,6 @@
 ---
 name: forms
-description: Build a form that people can actually complete, covering labels, validation timing, error recovery, submit states, required fields, autofill, mobile input, and multi-step flows. Use when adding or changing any input, form, or checkout flow, or when users abandon a form, mistype into it, or lose what they typed.
+description: Build a form that people can actually complete, covering labels, validation timing, error recovery, submit states, required fields, autofill, mobile input, and multi-step flows. Use when adding or changing any input, form, or checkout flow, or when users abandon a form, mistype into it, or lose what they typed. Not for general component composition and accessibility, which is frontend-craft, and not for a single search box, toggle, or inline edit of one value.
 ---
 
 # Forms
@@ -90,3 +90,7 @@ Where the project has a form library and an established pattern, follow it. Cons
 ## Before you hand it over
 
 Fill the form in as a hostile user: submit it empty, submit it half-complete, paste into every field, get one field wrong and fix it, submit twice fast, and complete it with the keyboard alone. Then check the three that survive most often: input lost on a failed submit, a placeholder doing a label's job, and validation firing while the person is still typing.
+
+That pass is manual, so it proves the form once and protects it never. The paths worth pinning are the ones you just walked by hand: a rejected submit that keeps what was typed, and a field that validates when it should. Call the Skill tool with "testing-strategy" for the seam those belong at.
+
+Then call the Skill tool with "verify-before-done", because a form is easy to declare working from the one path you happened to complete.
