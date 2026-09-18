@@ -42,7 +42,7 @@ npx skills add jonathanjuliani/skills --all           # take everything
 npx skills add jonathanjuliani/skills --skill design-review --skill forms
 ```
 
-There is no category flag, so a whole category means listing its names. Add `-g` for your user directory instead of the project, and `-a claude-code` to target one agent.
+There is no category flag, so a whole category means listing its names. Add `-g` for your user directory instead of the project, and `-a cursor` or `-a claude-code` to target one agent.
 
 ### Claude Code
 
@@ -66,13 +66,15 @@ codex plugin add jon@skills
 
 Reads `.cursor-plugin/plugin.json`, which lists every skill path (Cursor plugins do not recurse into bucket folders). These are workflows, so they belong in the skills layer rather than pasted into `.cursor/rules/*.mdc`.
 
-**Local (any plan).** Symlink the clone and reload Cursor:
+**GitHub import (any plan).** Customize → Plugins → From GitHub Repository → `https://github.com/jonathanjuliani/skills`. Cursor reads `.cursor-plugin/marketplace.json`. Install `jon` for user or project scope. Setup is `/jon:setup-skills` (or `/setup-skills` if Cursor does not namespace).
+
+**Local copy (plugin development / offline).** Cursor skips a symlink that points at a clone elsewhere on disk, so copy the plugin into `~/.cursor/plugins/local` instead:
 
 ```bash
-ln -s ~/development/jon/skills ~/.cursor/plugins/local/jon
+./scripts/install-cursor.sh
 ```
 
-Then fully quit Cursor (`Cmd+Q`) and reopen. Confirm all 31 skills under Customize → Skills, then run `/setup-skills` (or `/jon:setup-skills` if the plugin is namespaced).
+Then fully quit Cursor (`Cmd+Q`) and reopen, or run Developer: Reload Window. Enable **Include third-party Plugins, Skills, and other configs**. On Teams or Enterprise, an admin also needs **Allow Local Plugin Imports**. Confirm all 31 skills under Customize → Skills, then run `/setup-skills` (or `/jon:setup-skills` if the plugin is namespaced). Re-run the script after you change the plugin locally.
 
 **Team Marketplace.** On Teams or Enterprise, an admin can import the GitHub repo: Dashboard → Plugins → Add Marketplace → Import from Repo → `https://github.com/jonathanjuliani/skills`. Cursor reads `.cursor-plugin/marketplace.json`.
 
