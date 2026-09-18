@@ -18,7 +18,7 @@ It checks frontmatter, naming, guardrails, links, manifest sync and markdown sty
 
 A new skill is not installed until it is listed in every harness manifest, and the validator will fail until it is:
 
-- `.claude-plugin/plugin.json` and `.cursor-plugin/plugin.json` list each skill path explicitly (plugin loaders do not recurse into bucket folders).
+- `.claude-plugin/plugin.json` and `plugins/jon/.cursor-plugin/plugin.json` list each skill path explicitly (plugin loaders do not recurse into bucket folders).
 - `.codex-plugin/plugin.json` points at `./skills/` as a directory and needs no per-skill entry.
 - `README.md` lists the skill under its bucket.
 - A **user-invoked** skill also needs `disable-model-invocation: true` in its frontmatter, `policy.allow_implicit_invocation: false` in its `agents/openai.yaml`, and a page under `docs/<bucket>/`.

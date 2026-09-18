@@ -24,7 +24,7 @@ if [[ -e "${DEST}" || -L "${DEST}" ]]; then
 fi
 
 mkdir -p "${DEST}"
-rsync -a --delete --exclude '.git/' "${REPO_ROOT}/" "${DEST}/"
+rsync -a --delete --copy-links "${REPO_ROOT}/plugins/jon/" "${DEST}/"
 
 echo "Cursor: copied plugin to ${DEST}"
 echo "  → Fully quit Cursor (Cmd+Q) and reopen, or Developer: Reload Window"

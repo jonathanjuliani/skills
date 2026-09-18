@@ -255,10 +255,11 @@ on_disk = {str(p.parent.relative_to(ROOT)) for p in ROOT.glob("skills/*/*/SKILL.
 # Harness manifests. They drift the moment one is edited alone, so the shared
 # fields are compared rather than trusted. Claude Code and Cursor list every
 # leaf path because their plugin loaders do not recurse into bucket folders.
-# Codex walks ./skills/ itself.
+# Codex walks ./skills/ itself. Cursor's plugin.json lives under plugins/jon
+# so GitHub import can resolve a subdirectory source.
 MANIFESTS = {
     ".claude-plugin/plugin.json": "list",
-    ".cursor-plugin/plugin.json": "list",
+    "plugins/jon/.cursor-plugin/plugin.json": "list",
     ".codex-plugin/plugin.json": "dir",
 }
 loaded = {}
@@ -302,11 +303,22 @@ try:
         for banned in ("keywords", "category", "tags"):
             if banned in entry:
                 errors.append(f".cursor-plugin/marketplace.json: '{banned}' belongs on plugin.json, not the marketplace entry")
-        expected_name = loaded.get(".cursor-plugin/plugin.json", {}).get("name")
+        expected_name = loaded.get("plugins/jon/.cursor-plugin/plugin.json", {}).get("name")
         if expected_name and entry.get("name") != expected_name:
             errors.append(f".cursor-plugin/marketplace.json: plugin name {entry.get('name')!r} does not match plugin.json {expected_name!r}")
-        if entry.get("source") not in ("./", "."):
-            errors.append(f".cursor-plugin/marketplace.json: source should be './', found {entry.get('source')!r}")
+        if (mkt.get("metadata") or {}).get("pluginRoot") != "plugins":
+            errors.append(".cursor-plugin/marketplace.json: metadata.pluginRoot should be 'plugins'")
+        if entry.get("source") != "jon":
+            errors.append(f".cursor-plugin/marketplace.json: source should be 'jon', found {entry.get('source')!r}")
+        if mkt.get("name") != "jon-skills":
+            errors.append(f".cursor-plugin/marketplace.json: name should be 'jon-skills', found {mkt.get('name')!r}")
+    cursor_skills = ROOT / "plugins/jon/skills"
+    if not cursor_skills.is_symlink():
+        errors.append("plugins/jon/skills: must be a symlink to ../../skills")
+    else:
+        link = cursor_skills.readlink()
+        if str(link) != "../../skills":
+            errors.append(f"plugins/jon/skills: symlink should be ../../skills, found {str(link)!r}")
 except FileNotFoundError:
     errors.append(".cursor-plugin/marketplace.json: missing")
 except Exception as e:

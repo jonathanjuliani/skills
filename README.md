@@ -64,17 +64,17 @@ codex plugin add jon@skills
 
 ### Cursor
 
-Reads `.cursor-plugin/plugin.json`, which lists every skill path (Cursor plugins do not recurse into bucket folders). These are workflows, so they belong in the skills layer rather than pasted into `.cursor/rules/*.mdc`.
+Reads `plugins/jon/.cursor-plugin/plugin.json`, which lists every skill path (Cursor plugins do not recurse into bucket folders). These are workflows, so they belong in the skills layer rather than pasted into `.cursor/rules/*.mdc`. GitHub import needs the plugin in a subdirectory: `.cursor-plugin/marketplace.json` points at `plugins/jon` with a bare `source` name. A repo-root `"source": "./"` is silently rejected.
 
-**GitHub import (any plan).** Customize → Plugins → From GitHub Repository → `https://github.com/jonathanjuliani/skills`. Cursor reads `.cursor-plugin/marketplace.json`. Install `jon` for user or project scope. Setup is `/jon:setup-skills` (or `/setup-skills` if Cursor does not namespace).
-
-**Local copy (plugin development / offline).** Cursor skips a symlink that points at a clone elsewhere on disk, so copy the plugin into `~/.cursor/plugins/local` instead:
+**Local copy (plugin development / offline).** Does not go through GitHub import. Cursor skips a symlink that points at a clone elsewhere on disk, so copy the plugin into `~/.cursor/plugins/local` instead:
 
 ```bash
 ./scripts/install-cursor.sh
 ```
 
 Then fully quit Cursor (`Cmd+Q`) and reopen, or run Developer: Reload Window. Enable **Include third-party Plugins, Skills, and other configs**. On Teams or Enterprise, an admin also needs **Allow Local Plugin Imports**. Confirm all 31 skills under Customize → Skills, then run `/setup-skills` (or `/jon:setup-skills` if the plugin is namespaced). Re-run the script after you change the plugin locally.
+
+**GitHub import (any plan).** Customize → Plugins → From GitHub Repository → `https://github.com/jonathanjuliani/skills`. Cursor reads `.cursor-plugin/marketplace.json` and installs `jon` from `plugins/jon`. Choose user or project scope. Setup is `/jon:setup-skills` (or `/setup-skills` if Cursor does not namespace). If the import dialog closes with no plugin and no cache folder, use the local copy instead.
 
 **Team Marketplace.** On Teams or Enterprise, an admin can import the GitHub repo: Dashboard → Plugins → Add Marketplace → Import from Repo → `https://github.com/jonathanjuliani/skills`. Cursor reads `.cursor-plugin/marketplace.json`.
 
@@ -251,7 +251,7 @@ Small, composable skills that defer to the project in front of them, so they sta
 - `evals/` the test harness and its findings. `RESULTS.md` records what has and has not been measured, including what failed.
 - `scripts/validate.py` the checks: frontmatter parses, names match folders, guardrails present, cross-references and relative links resolve, manifests in sync, no undeclared external skill, and markdown style holds. `.githooks/pre-commit` runs it before a commit; `.github/workflows/validate.yml` runs it on push and pull request plus a weekly link check.
 - `.agents/conventions.md` how to write and extend a skill here. `AGENTS.md` instructions for an agent working on this repo, not for consumers.
-- `.claude-plugin/`, `.codex-plugin/`, `.cursor-plugin/`, `gemini-extension.json` one manifest per harness, kept in sync by the validator. `GEMINI.md` is the context file the Gemini extension loads.
+- `.claude-plugin/`, `.codex-plugin/`, `.cursor-plugin/` (marketplace) plus `plugins/jon/` (Cursor plugin), `gemini-extension.json` one manifest per harness, kept in sync by the validator. `GEMINI.md` is the context file the Gemini extension loads.
 
 ```bash
 pip install pyyaml
