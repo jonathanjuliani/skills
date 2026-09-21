@@ -9,8 +9,19 @@ link to a reference file that has been renamed or removed.
 
 Pass --links to also resolve external URLs. That is off by default because it
 needs the network and can flake; the rest of the run is offline and fast.
+
+Pass --inventory to print a per-skill word-count table (SKILL.md body vs
+companions). The table is additive; validation still runs.
 """
 import json, pathlib, re, sys
+
+LINK = re.compile(r"\[[^\]]*\]\((?!https?://|#)([^)]+)\)")
+# Progressive disclosure budget on the SKILL.md body (frontmatter excluded).
+# A warning is noise, a failure is a split that did not happen. See
+# .agents/conventions.md. Names in SIZE_ALLOWLIST may exceed FAIL_WORDS.
+WARN_WORDS = 1200
+FAIL_WORDS = 2000
+SIZE_ALLOWLIST = set()
 
 try:
     import yaml
@@ -24,7 +35,19 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 # declared. Anything else belongs in README's "Optional companions", named with
 # its source, never as a bare /slash reference.
 HARNESS_BUILTINS = {"code-review", "simplify", "run", "dataviz", "security-review"}
-errors, skills = [], {}
+errors, warnings, skills, inventory = [], [], {}, []
+
+
+def skill_body(text):
+    if text.startswith("---\n"):
+        parts = text.split("---\n", 2)
+        if len(parts) == 3:
+            return parts[2]
+    return text
+
+
+def word_count(text):
+    return len(text.split())
 
 for f in sorted(ROOT.glob("skills/*/*/SKILL.md")):
     rel = f.relative_to(ROOT)
@@ -101,6 +124,42 @@ for f in sorted(ROOT.glob("skills/*/*/SKILL.md")):
 
     if fm.get("name"):
         skills[fm["name"]] = text
+        body = skill_body(text)
+        body_words = word_count(body)
+        name = fm["name"]
+        if name not in SIZE_ALLOWLIST:
+            if body_words > FAIL_WORDS:
+                errors.append(f"{rel}: SKILL.md body is {body_words} words; the budget is "
+                              f"{FAIL_WORDS} (see .agents/conventions.md). Split a lookup "
+                              f"or surface page into a companion.")
+            elif body_words > WARN_WORDS:
+                warnings.append(f"{rel}: SKILL.md body is {body_words} words (warn above "
+                                f"{WARN_WORDS}). Consider splitting a lookup into a companion.")
+        companions, companion_words, linked = [], 0, []
+        for p in sorted(f.parent.rglob("*")):
+            if not p.is_file() or p == f or p.suffix not in {".md", ".yaml", ".yml"}:
+                continue
+            if p.parent.name == "agents" and p.name == "openai.yaml":
+                continue
+            companions.append(str(p.relative_to(f.parent)))
+            companion_words += word_count(p.read_text())
+        for target in LINK.findall(text):
+            dest = (f.parent / target.split("#")[0]).resolve()
+            try:
+                dest.relative_to(f.parent.resolve())
+            except ValueError:
+                continue
+            if dest != f.resolve() and dest.exists() and target.split("#")[0] not in linked:
+                linked.append(target.split("#")[0])
+        inventory.append({
+            "name": name,
+            "rel": str(rel),
+            "user_invoked": user_invoked,
+            "body_words": body_words,
+            "companion_words": companion_words,
+            "companions": companions,
+            "linked": linked,
+        })
 
 graph = {}
 for name, text in skills.items():
@@ -202,7 +261,6 @@ for f in sorted([*ROOT.glob("skills/**/*.md"), *ROOT.glob("docs/**/*.md"), ROOT 
                           f"same line, or list it under README's Optional companions.")
 
 # Relative links: a renamed reference file breaks these with no other symptom.
-LINK = re.compile(r"\[[^\]]*\]\((?!https?://|#)([^)]+)\)")
 for f in sorted([*ROOT.glob("skills/**/*.md"), *ROOT.glob("docs/**/*.md"), ROOT / "README.md"]):
     rel = f.relative_to(ROOT)
     for target in LINK.findall(f.read_text()):
@@ -382,6 +440,24 @@ if yaml is None:
     print(f"  This interpreter is {sys.executable}. On macOS the system python3 cannot")
     print("  pip install; use a different interpreter, a venv, or pipx.")
     print("  CI runs the full check either way.\n")
+
+if "--inventory" in sys.argv:
+    print("skill                           invoke   skill.md  companions  linked")
+    total_body = total_comp = 0
+    for row in inventory:
+        invoke = "user" if row["user_invoked"] else "model"
+        linked = ", ".join(row["linked"]) if row["linked"] else "-"
+        print(f"{row['name']:<30} {invoke:<7} {row['body_words']:>8} {row['companion_words']:>11}  {linked}")
+        total_body += row["body_words"]
+        total_comp += row["companion_words"]
+    print(f"{'TOTAL':<30} {'':<7} {total_body:>8} {total_comp:>11}")
+    print()
+
+if warnings:
+    print(f"WARN ({len(warnings)})")
+    for w in warnings:
+        print("  -", w)
+    print()
 
 if errors:
     print(f"FAIL ({len(errors)})")

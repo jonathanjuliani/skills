@@ -21,12 +21,12 @@ State the shape you detected and the evidence. Recommend a different shape only 
 
 ## Recommend the structure
 
-Identify the surface (backend, frontend, mobile) and apply the matching reference:
+Identify the surface (backend, frontend, mobile) and, after you know which it is, apply the matching reference. Do not open all four.
 
 - Backend: [backend.md](backend.md)
 - Frontend (React web): [frontend.md](frontend.md)
 - Mobile (React Native): [mobile.md](mobile.md)
-- Monorepo layout across surfaces: [monorepo.md](monorepo.md)
+- Monorepo layout across surfaces: [monorepo.md](monorepo.md), once you have classified the shape as a monorepo
 
 The through-line across all surfaces: **organize by feature or domain, not by technical type.** Group what changes together. A `users/` folder holding its component, hook, service, and types beats parallel `components/`, `hooks/`, `services/` trees that force you to touch four folders for one change. Keep modules deep (a small public surface hiding real work) and boundaries explicit.
 

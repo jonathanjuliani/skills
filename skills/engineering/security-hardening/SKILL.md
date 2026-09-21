@@ -19,23 +19,9 @@ Sort every input into one of three tiers, and know which tier you are in at all 
 
 Most vulnerabilities are a tier confusion: something untrusted was read as though it were trusted, usually because it arrived by a path nobody was thinking about.
 
-## Where the holes actually are
+When you have classified the trust and need the ranked catalog of what actually goes wrong, read [threats.md](threats.md). Do not load it to invent a scan list before you have a boundary. For a package you are about to add, call the Skill tool with "dependency-choice" rather than duplicating that judgement here.
 
-Ordered by how often they are the real finding, not by how much attention they get.
-
-- **Broken access control.** The most common serious flaw, and the least likely to be caught by a tool. Every request must answer who is asking and whether they may touch this specific resource. Enforce it server-side, per object, not per route: an endpoint that checks a user is logged in and then trusts an id from the request lets any user read any record. Never rely on a hidden UI control as the enforcement.
-- **Injection.** Untrusted values concatenated into an interpreted string: SQL, NoSQL query objects, shell commands, file paths, template expressions. Use parameterized queries and the library's escaping, never string building. A path assembled from user input needs normalizing and confining to its intended root.
-- **Secrets.** Never in source, never in a client bundle, never in a log line, never in a URL. Read them from the environment through a validated loader so a missing one fails at startup rather than at midnight. Anything that reached a client is public, whatever it is named. A secret committed once is compromised, so rotate it rather than deleting the commit.
-- **Sensitive data exposure.** Decide what counts as sensitive for this domain before writing the logger. Errors and traces are the usual leak: a stack trace to the client, a request body in a log, tokens in an analytics event. Redact at the point of logging, not by remembering to be careful.
-- **Cross-site concerns, web.** Injected HTML is the risk React normally removes, so treat any escape from it as a decision requiring sanitization. Cookie-based sessions need CSRF protection and correct `SameSite`, `Secure` and `HttpOnly` flags. A content security policy is worth its configuration cost on anything public.
-- **Supply chain.** Every dependency runs with your privileges. Call the Skill tool with "dependency-choice", which weighs maintenance and removal cost, and add the security axis: audit for known advisories, treat install scripts as code you are running, and pin what you cannot review.
-- **Server-side request forgery.** Any feature that fetches a URL supplied by a user can be pointed at internal addresses and cloud metadata endpoints. Allowlist destinations rather than blocklisting them.
-
-## By surface
-
-- **Backend.** Authorization per object, parameterized data access, rate limiting on anything expensive or guessable, validated environment, no secret in a log, least privilege on the database and cloud credentials.
-- **Frontend, React.** Nothing secret reaches the bundle, and no authorization decision is made only in the client. Treat the UI as a convenience over the server's rules. Sanitize any raw HTML, and keep tokens out of URLs and out of storage that other scripts can read.
-- **Mobile, React Native.** The bundle ships to the device and can be read, so it holds no secret. Credentials belong in the platform keychain or keystore, never in async storage. Certificate handling stays strict; disabling validation for a staging environment has a way of shipping.
+After you know whether the change is backend, React web, or React Native, read [surfaces.md](surfaces.md) for the controls that apply there. Skip it until the surface is known.
 
 ## Rules
 

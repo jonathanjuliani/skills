@@ -44,7 +44,7 @@ Treat the output as a **starting point to edit, never a result to ship**:
 
 ## Capture what you found
 
-A reference read and discarded teaches once. Write the findings to the personal store at `~/.jon-skills/design/references/`, one file per reference, recording what you took, **what you rejected and why**, the surface and audience it came from, and a date. The format and the rules are in [capture.md](capture.md).
+A reference read and discarded teaches once. When you write the store entry, use the format and the rules in [capture.md](capture.md). Write the findings to the personal store at `~/.jon-skills/design/references/`, one file per reference, recording what you took, **what you rejected and why**, the surface and audience it came from, and a date.
 
 A shipped seed lives in [references/](references/). It is the community tier of this store: starter reads that travel with the plugin. The personal store outranks it. New captures go to the personal store unless the user asks to ship them.
 
@@ -54,7 +54,7 @@ Offer this rather than doing it silently, and check both stores before a new rea
 
 The most useful distinction in this skill. A **convention** is a pattern so widespread that departing from it costs the user; reuse it freely. A **signature** is one product's recognisable choice; reusing it is imitation.
 
-[patterns.md](patterns.md) records the conventions worth reusing, the archetypes worth choosing between, and the things mature interfaces reliably avoid. Read the last section first: it is the highest-signal part, and it is mostly a list of what generated interfaces do that shipped ones do not. [motion.md](motion.md) is the parallel axis for how the interface moves: intensity, complexity, and type are chosen independently of the layout archetype.
+[patterns.md](patterns.md) records the conventions worth reusing, the archetypes worth choosing between, and the things mature interfaces reliably avoid. Read it when you are distinguishing convention from signature, last section first: it is the highest-signal part, and it is mostly a list of what generated interfaces do that shipped ones do not. [motion.md](motion.md) is the parallel axis for how the interface moves; read it when assigning intensity, complexity, and type, independently of the layout archetype.
 
 ## Rules
 

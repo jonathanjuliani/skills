@@ -33,11 +33,7 @@ Step 1 needs a number, and a project often does not have one. These are the defa
 
 Where the project has its own budgets, service levels, or a performance clause in a contract, those replace this table entirely.
 
-## Where the costs usually are, by surface
-
-- **Frontend (React web):** unnecessary re-renders (unstable props/context, missing memoization where it pays), oversized JS bundle (code-split routes, drop heavy deps, tree-shake), unoptimized images and fonts, waterfall network requests, layout thrash. Measure with the browser profiler, a Lighthouse/Web Vitals run, and the bundle analyzer.
-- **Mobile (React Native):** unvirtualized long lists (use a virtualized list), heavy work on the JS thread blocking interactions, bridge chatter, large startup bundle, unoptimized images. Measure with the RN profiler and device traces, on a real device, not only the simulator.
-- **Backend (Node/TS):** N+1 queries and missing indexes (usually the biggest win), synchronous or blocking work on the event loop, missing caching, unbounded concurrency, oversized payloads. Measure with request timing, DB query logs and explain plans, and a flame graph for CPU.
+After you know the surface, read [surfaces.md](surfaces.md) for where the dominant cost usually sits and how to measure it. The loop above still applies; this is the lookup, not a substitute for measuring.
 
 ## Rules
 

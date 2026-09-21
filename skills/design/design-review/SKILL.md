@@ -27,7 +27,7 @@ Ten heuristics, each scored 1 to 5. The rubric is fixed:
 | 4 | Works, minor polish outstanding. No user impact |
 | 5 | Nothing to add |
 
-The ten, and what to look for in each, are in [heuristics.md](heuristics.md).
+The ten, and what to look for in each, are in [heuristics.md](heuristics.md). Read it when you are scoring the ten, not before you have judged fidelity to the read.
 
 **The dials do not move these scores.** Variance, motion and density are aesthetic choices; a 2 is a 2 on a playful marketing page and on a regulated dashboard. Accessibility findings in particular are never traded against a visual decision.
 

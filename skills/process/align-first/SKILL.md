@@ -7,7 +7,7 @@ description: Close the gap between what was asked and what is about to be built,
 
 Say what you understood before you build it. The most expensive failure in software is not a bug, it is finishing something correctly that nobody wanted, and the only moment that costs nothing to prevent is before the work starts.
 
-The defining constraint: one pass is the default, not the ceiling. It states the reading, names the assumptions, surfaces the branches that matter, and then **keeps going under stated assumptions** rather than waiting. That pass has to stay cheap enough to run every time, because a tool that costs a conversation gets skipped on exactly the tasks that needed it. When it does not converge, it escalates into the bounded interview below, and that interview is bounded for the same reason the pass is cheap: an agent that believes asking is free will ask forever.
+The defining constraint: one pass is the default, not the ceiling. It states the reading, names the assumptions, surfaces the branches that matter, and then **keeps going under stated assumptions** rather than waiting. That pass has to stay cheap enough to run every time, because a tool that costs a conversation gets skipped on exactly the tasks that needed it. When it does not converge, read [interview.md](interview.md) and escalate; that interview is bounded for the same reason the pass is cheap: an agent that believes asking is free will ask forever.
 
 ## The pass
 
@@ -38,34 +38,7 @@ That is the whole artifact. When it grows past a handful of lines it has become 
 
 ## When one pass is not enough
 
-Cross into the interview when the pass fails to land: the restatement came back wrong, a branch has no default safe enough to proceed under, or the cost of guessing wrong is a rewrite rather than an edit. A pass that landed is the normal outcome and needs nothing further.
-
-Then work the branches one question at a time:
-
-- **One question per turn, never a list.** A list gets answered in aggregate, which is how the branch that mattered comes back unanswered.
-- **Carry your recommended answer with every question.** The person should be able to accept rather than compose, because reading a proposal is cheaper than authoring a decision.
-- **Read before you ask.** Anything the codebase, the tracker, or the conversation can answer is not a question, and resolving it yourself is the work.
-- **Walk branches in dependency order.** A parent's answer routinely deletes its children, so asking a child first spends a question on something that was about to become irrelevant.
-
-### What keeps it from running forever
-
-**The branch list is the budget.** Declare the branches as a numbered list before asking anything, then walk that list and stop. The bound comes from the work rather than from an arbitrary quota. A new question may join the list only when an answer actually opened it, and only if you name which answer opened it. A branch that appears from nowhere is the interview generating its own fuel.
-
-**Only branches are askable.** The definition from step 3 holds unchanged: a branch produces materially different work, and everything else is an assumption you resolve and list. This is what keeps the interview on what matters instead of drifting into naming, preferences, and edge cases. The format makes each question feel individually justified, so the filter matters more here than in the pass, not less.
-
-**Every question names what prompted it**: a line in the request, a file you read, a screen that exists, a constraint in the config. A question that cannot name its grounding is usually about a system that is not there, which is what a hallucination looks like from the inside of an interview.
-
-**Three stops, any one of which ends it:**
-
-- The declared list is exhausted.
-- Two consecutive answers leave the restated reading unchanged. Diminishing returns you can observe, rather than a judgement about whether more questions would help, which is the judgement that never converges.
-- The person says stop, redirects, or answers something other than what was asked. Their attention is the budget being spent, and calling time on it is theirs to do.
-
-**Never re-ask a closed branch.** Answered explicitly or answered by implication, it is closed. Re-raising it is the signature of a loop and the fastest way to lose the format.
-
-**It ends in the same artifact as the pass**: the reading, the assumptions, what is still open and the default you are proceeding under. Whatever a stop leaves unresolved becomes a stated assumption under step 5 and the work continues. An interview with an ending but no terminal state is one the work never restarts from.
-
-For a standalone stress-test session rather than an escalation from a pass, `mattpocock/skills` ships `grill-me` and `grill-with-docs`, which are the reference implementations of the relentless version.
+Read [interview.md](interview.md) only when the pass failed to land: the restatement came back wrong, a branch has no default safe enough to proceed under, or the cost of guessing wrong is a rewrite rather than an edit. A pass that landed is the normal outcome and needs nothing further. Do not load the interview to decorate a pass that already converged.
 
 ## Rules
 
@@ -101,4 +74,4 @@ The escalation has its own boundary, which is not the same as the pass's. Do not
 
 Check the pass for the two things that make it decorative: a restatement that repeats the request's own words instead of saying what you will do, and a question list containing anything you could have answered by reading the code.
 
-If it escalated, check the two that make the interview expensive: a question that never named what prompted it, and a branch that was already answered earlier in the conversation.
+If it escalated, the checks that make the interview expensive are in [interview.md](interview.md): a question that never named what prompted it, and a branch that was already answered earlier in the conversation.

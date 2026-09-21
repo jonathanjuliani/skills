@@ -14,6 +14,26 @@ Buckets: `foundation/` (the engine and setup), `engineering/` (code), `design/` 
 
 The line between `design/` and `engineering/` is that design decides and engineering builds. A skill that settles what a surface should look like, how it is structured, or whether it is any good belongs in `design/`. A skill that writes the components and meets the accessibility numbers in code belongs in `engineering/`.
 
+## Progressive disclosure
+
+Harnesses already load skills in three layers. This pack uses that split; it does not rebuild a loader, add a catalog file, or rename folders.
+
+1. **Description** (always in the skill list). The YAML `name` and `description` are the catalog. Write them for the routing decision, per Description shape below. Do not thin them to save tokens: a short description that cannot be told from its neighbour is how the skill never loads.
+2. **`SKILL.md` body** (on invoke). The job, the defining constraint, the procedure that always runs, rules, guardrails, and Skill-tool handoffs. The agent must be able to complete the common path from this file alone.
+3. **Companions** (on demand). Surface-specific pages, long lookup tables, escalation protocols, write-payloads. Flat next to `SKILL.md` (`detection.md`, `backend.md`, `heuristics.md`), not nested under `resources/` or `scripts/` unless a skill actually ships an executable.
+
+The split test: would the agent skip this file on the common path? If no, it stays in `SKILL.md`. A companion earns its place when it is conditional: "read [backend.md](backend.md) after you know the surface is backend", not a dump of every extra file at the top.
+
+Link with **when**, not merely that the file exists. `project-shape` loading `backend.md` after it has classified the surface, and `diagram` pointing at `when-to-use.md` for the full mapping, are the shape to copy.
+
+Do not split just to hit a word count.
+
+- **Persistent skills stay compact and inline.** A standards reference or a completion gate is a posture. A companion the agent never re-opens is a silent skip of the gate. `ts-standards` and `verify-before-done` are the current cases.
+- **Linear procedures stay in one file.** If every section usually applies (`create`, `forms`, `ship-flow`), splitting turns one read into five.
+- **Payload files stay payload-only.** A file that will be spliced into something the user owns contains the payload and nothing else. Mixing placement prose with the payload is how `setup-skills` once rewrote an `AGENTS.md` from scratch; the procedure lives in `SKILL.md` or a sibling that *describes* the splice, and the `*-block.md` files remain the splice.
+
+`scripts/validate.py` budgets the `SKILL.md` body: a warning above 1,200 words, a failure above 2,000 unless the skill is allowlisted. The budget is a check on this repo, not a contract the harnesses run at install time. Adding a companion inside an existing skill folder does not change plugin manifests, folder paths, or required frontmatter; those are the install surface and they stay put.
+
 ## Invocation: model-invoked vs user-invoked
 
 The one axis that splits skills is who can reach them.

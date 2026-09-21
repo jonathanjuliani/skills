@@ -23,7 +23,7 @@ Six things, each answerable in a line. Pull what you can from the product, the c
 2. **Audience, and what they are doing when they arrive.** A procurement committee comparing vendors, an operator who lives in this screen eight hours a day, a recruiter scanning for thirty seconds, a customer who is annoyed and looking for a refund. What they are doing matters more than who they are.
 3. **What they already use.** People read a new interface against the ones they know. Naming the two or three products the audience uses daily tells you which conventions are invisible to them and which will feel foreign.
 4. **References, and what specifically is wanted from each.** "Like Linear" is not a reference until it says which part: the density, the typography, the restraint, the keyboard-first interaction. Call the Skill tool with "design-inspiration" for how to take a reference apart without copying it.
-5. **The dials.** Variance, motion and density, set from everything above. The mapping is in [dials.md](dials.md).
+5. **The dials.** Variance, motion and density, set from everything above. When you set those three, the mapping is in [dials.md](dials.md).
 6. **Constraints that override taste.** Accessibility-critical audiences, regulated or public-sector contexts, low-bandwidth or older devices, trust-first commerce, products used by children, an existing brand you do not own. These are not inputs to be balanced against aesthetics. They win.
 
 ## State it in one line

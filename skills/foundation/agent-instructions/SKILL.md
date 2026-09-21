@@ -42,13 +42,7 @@ Keep it to terms that are genuinely load-bearing and genuinely local: a word the
 
 It is read by the rest of this plugin rather than merely stored: `resolve-conventions` treats it as authoritative for naming, and `ts-standards`, `information-architecture` and `forms` all defer to its terms. `setup-skills` offers to seed a minimal one. Where a project deserves a deeper treatment, a dedicated domain-modeling skill (`mattpocock/skills` ships one) builds and stress-tests the model rather than just recording it.
 
-## Structure
-
-Lead with what is needed most often. Group by situation rather than by topic, so a rule is found by the work being done. Keep it scannable: an agent reads this under time pressure alongside everything else in context.
-
-Prefer one file. Where a monorepo genuinely needs per-package instructions, a nested file next to that package holds only what is specific to it, and the root file stays the general one.
-
-`AGENTS.md` is the cross-tool convention and the right default. `CLAUDE.md` is the Claude Code specific name. Where both exist, one should point at the other rather than each carrying half the rules, because two files drift.
+When you are writing or restructuring the file (not when diagnosing why one is ignored), the outline is in [structure.md](structure.md).
 
 ## Improving one that is being ignored
 

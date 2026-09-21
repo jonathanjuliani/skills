@@ -34,11 +34,7 @@ Alert on what a user can feel: elevated error rate, latency past the budget, a q
 
 Every alert needs a human action. An alert that fires and is routinely ignored is worse than no alert, since it trains the team to ignore the next one too, and the next one is the real one. Where an alert has no action, either delete it or write the runbook line that gives it one.
 
-## By surface
-
-- **Backend.** Rate, errors and duration per operation. Structured logs with a correlation id. Traces across service and datastore calls. Health that reflects dependencies, not just that the process is alive.
-- **Frontend, React.** Real user monitoring for the field measurements, not lab numbers, because your machine is not the user's. Error tracking with source maps uploaded, so a stack trace is readable. Track the failures a user actually experiences: a form that would not submit, a route that would not load. Call the Skill tool with "perf-audit" for the budgets these measurements are checked against.
-- **Mobile, React Native.** Crash reporting first, since a crash is invisible otherwise. Startup time and screen transitions. Telemetry has to survive being offline, so buffer and send later rather than dropping.
+After you know the surface, read [surfaces.md](surfaces.md) for what to emit there. On frontend, field measurements that are over budget belong to perf-audit: call the Skill tool with "perf-audit" when the question is a number you can already measure.
 
 ## Rules
 

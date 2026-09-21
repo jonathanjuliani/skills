@@ -28,11 +28,7 @@ Define every colour by its role in both light and dark before shipping either. A
 
 The same applies to anything else that is theme-dependent: shadow, which needs different treatment on a dark surface, and any colour used as a border rather than as a fill. Re-verify every pair against the contrast numbers in `frontend-craft`'s design defaults; a token that passes in light and fails in dark is a token that has not been defined yet.
 
-## Set the scales, then hold them
-
-Spacing, type, radius, and motion each get a scale, and the value of a scale is entirely in not deviating from it. The starting values are in `frontend-craft`'s design defaults, and the dials from `design-brief` decide where on each scale this product sits: density picks the spacing step, the read picks the type ratio.
-
-Fewer steps than feels comfortable. A spacing scale with twelve values is a suggestion, and it produces the same arbitrary layout as no scale at all.
+When you are naming spacing, type, radius, or motion steps, read [scales.md](scales.md) after the semantic layer exists. Skip it while you are still deciding whether a system exists or what to name.
 
 ## Where they live
 
