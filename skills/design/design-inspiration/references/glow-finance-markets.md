@@ -3,6 +3,12 @@ source: https://app.glowfinance.xyz/markets
 captured: 2026-09-11
 surface: dense lending-market table
 audience: operators comparing rates across assets
+domains:
+  - crypto-defi
+  - finance
+principles:
+  - density
+  - operator-speed
 verify_after: 2027-03-11
 ---
 

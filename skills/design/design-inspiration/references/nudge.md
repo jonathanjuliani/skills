@@ -3,6 +3,11 @@ source: https://getnudge.info
 captured: 2026-09-11
 surface: healthcare marketing
 audience: clinic operators buying between-visit engagement
+domains:
+  - health
+principles:
+  - trust-first
+  - product-as-proof
 verify_after: 2027-03-11
 ---
 

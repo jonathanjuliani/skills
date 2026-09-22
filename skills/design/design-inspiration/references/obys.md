@@ -3,6 +3,10 @@ source: https://obys.agency
 captured: 2026-09-17
 surface: studio marketing with oversized type and a reconfigurable work column
 audience: brands hiring a digital studio for campaign and site craft
+domains:
+  - studio-agency
+principles:
+  - typographic
 motion: cinematic
 motion_complexity: high
 motion_types:

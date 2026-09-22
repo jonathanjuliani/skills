@@ -3,6 +3,11 @@ source: https://bun.sh
 captured: 2026-09-14
 surface: developer-runtime marketing with dense reproducible benchmarks
 audience: JavaScript developers choosing a runtime, package manager, test runner, or bundler
+domains:
+  - developer-tools
+principles:
+  - density
+  - product-as-proof
 motion: purposeful
 verify_after: 2027-03-14
 ---

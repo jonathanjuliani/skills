@@ -3,6 +3,12 @@ source: https://romemichal.pl
 captured: 2026-09-11
 surface: designer portfolio
 audience: hiring managers scanning a product designer in seconds
+domains:
+  - portfolio
+principles:
+  - typographic
+  - restraint
+  - task-focused
 verify_after: 2027-03-11
 ---
 

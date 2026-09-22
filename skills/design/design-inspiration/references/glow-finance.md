@@ -3,6 +3,12 @@ source: https://www.glowfinance.xyz
 captured: 2026-09-11
 surface: DeFi protocol marketing
 audience: yield-seeking users deciding whether to enter the app
+domains:
+  - crypto-defi
+  - finance
+principles:
+  - product-as-proof
+  - trust-first
 verify_after: 2027-03-11
 ---
 

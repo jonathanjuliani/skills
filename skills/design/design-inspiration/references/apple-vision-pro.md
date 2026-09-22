@@ -3,6 +3,11 @@ source: https://www.apple.com/apple-vision-pro
 captured: 2026-09-17
 surface: hardware product page where scroll is a film of the device
 audience: shoppers deciding whether spatial computing is a real product
+domains:
+  - hardware-commerce
+  - ai-ml
+principles:
+  - product-as-proof
 motion: cinematic
 motion_complexity: high
 motion_types:

@@ -3,6 +3,12 @@ source: https://cerebrium.ai
 captured: 2026-09-11
 surface: GPU-infrastructure marketing
 audience: teams deploying real-time AI workloads
+domains:
+  - infrastructure
+  - ai-ml
+principles:
+  - product-as-proof
+  - trust-first
 verify_after: 2027-03-11
 ---
 

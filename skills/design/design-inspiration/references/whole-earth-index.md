@@ -3,6 +3,12 @@ source: https://wholeearth.info
 captured: 2026-09-12
 surface: editorial archive index for historical publications
 audience: researchers and curious readers browsing a long-running magazine family
+domains:
+  - editorial
+principles:
+  - editorial-voice
+  - density
+  - typographic
 verify_after: 2027-03-12
 ---
 

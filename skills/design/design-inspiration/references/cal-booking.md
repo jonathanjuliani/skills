@@ -3,6 +3,11 @@ source: https://cal.com/simrell/30min
 captured: 2026-09-12
 surface: focused meeting booking flow
 audience: someone choosing a time to meet with a specific person
+domains:
+  - productivity
+principles:
+  - task-focused
+  - restraint
 motion: minimal
 verify_after: 2027-03-12
 ---

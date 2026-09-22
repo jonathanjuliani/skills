@@ -3,6 +3,11 @@ source: https://rive.app
 captured: 2026-09-17
 surface: motion-runtime product marketing with a live example reel
 audience: designers and engineers choosing how to ship interactive graphics
+domains:
+  - creative-tools
+  - developer-tools
+principles:
+  - product-as-proof
 motion: purposeful
 motion_complexity: simple
 motion_types:

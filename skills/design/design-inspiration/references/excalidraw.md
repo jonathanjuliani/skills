@@ -3,6 +3,11 @@ source: https://excalidraw.com
 captured: 2026-09-12
 surface: hand-drawn style whiteboard canvas application
 audience: people sketching diagrams that should feel informal and shareable
+domains:
+  - creative-tools
+principles:
+  - task-focused
+  - restraint
 motion: purposeful
 verify_after: 2027-03-12
 ---

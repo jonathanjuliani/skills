@@ -3,6 +3,12 @@ source: https://amie.so
 captured: 2026-09-14
 surface: AI productivity startup marketing with workflow narrative
 audience: knowledge workers replacing meeting bots and calendar glue with one agentic app
+domains:
+  - productivity
+  - ai-ml
+principles:
+  - product-as-proof
+  - task-focused
 motion: purposeful
 verify_after: 2027-03-14
 ---

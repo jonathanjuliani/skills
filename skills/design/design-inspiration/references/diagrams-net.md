@@ -3,6 +3,12 @@ source: https://app.diagrams.net
 captured: 2026-09-13
 surface: diagramming canvas application
 audience: people structuring flowcharts and architecture diagrams as spatial documents
+domains:
+  - creative-tools
+  - developer-tools
+principles:
+  - task-focused
+  - density
 motion: purposeful
 verify_after: 2027-03-13
 ---

@@ -3,6 +3,12 @@ source: https://dondibogusky.com
 captured: 2026-09-14
 surface: personal engineer blog and notes index
 audience: peers and hiring managers scanning practical web craft writing
+domains:
+  - editorial
+  - developer-tools
+principles:
+  - editorial-voice
+  - restraint
 motion: minimal
 verify_after: 2027-03-14
 ---

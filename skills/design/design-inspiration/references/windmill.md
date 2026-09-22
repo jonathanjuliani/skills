@@ -3,6 +3,11 @@ source: https://gowindmill.com
 captured: 2026-09-11
 surface: HR SaaS marketing
 audience: people teams replacing painful review cycles
+domains:
+  - hr
+principles:
+  - product-as-proof
+  - trust-first
 verify_after: 2027-03-11
 ---
 

@@ -3,6 +3,14 @@ source: https://www.wiz.io
 captured: 2026-09-14
 surface: dense B2B cloud-security marketing with graph and agent narrative
 audience: security leaders comparing code-to-cloud platforms for AI-era defense
+domains:
+  - security
+  - ops-admin
+  - ai-ml
+principles:
+  - density
+  - product-as-proof
+  - operator-speed
 motion: purposeful
 verify_after: 2027-03-14
 ---

@@ -3,6 +3,13 @@ source: https://theindex.website
 captured: 2026-09-14
 surface: dense curated directory of design studios
 audience: clients and peers scanning studios by place, practice, and signal
+domains:
+  - studio-agency
+  - editorial
+principles:
+  - density
+  - search-first
+  - editorial-voice
 motion: minimal
 verify_after: 2027-03-14
 ---

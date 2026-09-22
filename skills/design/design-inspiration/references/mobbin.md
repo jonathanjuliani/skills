@@ -3,6 +3,11 @@ source: https://mobbin.com
 captured: 2026-09-11
 surface: catalog marketing for a pattern library
 audience: designers searching for real shipped screens
+domains:
+  - creative-tools
+principles:
+  - search-first
+  - product-as-proof
 verify_after: 2027-03-11
 ---
 

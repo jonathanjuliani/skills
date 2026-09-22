@@ -3,6 +3,12 @@ source: https://restate.dev
 captured: 2026-09-11
 surface: developer-infrastructure marketing
 audience: backend engineers choosing a durable-execution runtime
+domains:
+  - infrastructure
+  - developer-tools
+principles:
+  - product-as-proof
+  - trust-first
 verify_after: 2027-03-11
 ---
 

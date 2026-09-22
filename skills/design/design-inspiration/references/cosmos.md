@@ -3,6 +3,12 @@ source: https://www.cosmos.so
 captured: 2026-09-11
 surface: editorial product marketing
 audience: creatives collecting visual references
+domains:
+  - creative-tools
+  - editorial
+principles:
+  - editorial-voice
+  - typographic
 motion: cinematic
 motion_complexity: medium
 motion_types:

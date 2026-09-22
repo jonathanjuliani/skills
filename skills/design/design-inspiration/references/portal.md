@@ -3,6 +3,12 @@ source: https://useportal.net
 captured: 2026-09-11
 surface: freelance-toolkit marketing
 audience: independents sending proposals and collecting payment
+domains:
+  - productivity
+  - finance
+principles:
+  - task-focused
+  - product-as-proof
 verify_after: 2027-03-11
 ---
 

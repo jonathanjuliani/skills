@@ -3,6 +3,12 @@ source: https://taito.ai
 captured: 2026-09-14
 surface: people-ops AI startup marketing with product-led assistant chrome
 audience: founders and people leads scaling from spreadsheets to governed HR workflows
+domains:
+  - hr
+  - ai-ml
+principles:
+  - product-as-proof
+  - task-focused
 motion: purposeful
 verify_after: 2027-03-14
 ---

@@ -3,6 +3,11 @@ source: https://www.seasats.com
 captured: 2026-09-12
 surface: hardware product marketing with interactive vessel exploration
 audience: defense, commercial, and science buyers evaluating autonomous ocean vehicles
+domains:
+  - hardware-commerce
+  - infrastructure
+principles:
+  - product-as-proof
 motion: cinematic
 motion_complexity: medium
 motion_types:

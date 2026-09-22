@@ -3,6 +3,14 @@ source: https://neon.com
 captured: 2026-09-14
 surface: agent-oriented backend documentation home with task table
 audience: developers and coding agents provisioning Postgres-backed backends
+domains:
+  - developer-tools
+  - infrastructure
+  - ai-ml
+principles:
+  - density
+  - task-focused
+  - product-as-proof
 motion: minimal
 verify_after: 2027-03-14
 ---

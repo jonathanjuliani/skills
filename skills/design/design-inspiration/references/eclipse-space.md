@@ -3,6 +3,11 @@ source: https://www.eclipse.space
 captured: 2026-09-11
 surface: cinematic B2B marketing
 audience: sovereign and commercial buyers of space infrastructure
+domains:
+  - infrastructure
+principles:
+  - product-as-proof
+  - trust-first
 motion: cinematic
 motion_complexity: medium
 motion_types:

@@ -3,6 +3,12 @@ source: https://www.getauctor.com
 captured: 2026-09-12
 surface: B2B product marketing with text hero over a live product canvas
 audience: services and implementation teams evaluating a system of record for software delivery
+domains:
+  - developer-tools
+  - ops-admin
+principles:
+  - product-as-proof
+  - density
 verify_after: 2027-03-12
 ---
 

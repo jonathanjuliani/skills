@@ -3,6 +3,12 @@ source: https://caniuse.com
 captured: 2026-09-14
 surface: dense browser-support reference with search-first home
 audience: web developers checking feature support across browsers and devices
+domains:
+  - developer-tools
+principles:
+  - search-first
+  - density
+  - operator-speed
 motion: minimal
 verify_after: 2027-03-14
 ---

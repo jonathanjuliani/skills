@@ -3,6 +3,11 @@ source: https://github.com/signup
 captured: 2026-09-13
 surface: focused account creation onboarding
 audience: someone creating a developer account to start using the product
+domains:
+  - developer-tools
+principles:
+  - task-focused
+  - restraint
 motion: minimal
 verify_after: 2027-03-13
 ---

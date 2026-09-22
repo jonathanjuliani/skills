@@ -19,20 +19,20 @@ Reach for the full read on a new surface, a deliberate redesign, or a project wh
 
 Six things, each answerable in a line. Pull what you can from the product, the code, and any reference the user named; ask only for what you genuinely cannot find.
 
-1. **Surface kind.** Marketing page, product screen, internal tool, dashboard, editorial, portfolio, onboarding flow. This alone rules out most of the decision space, since a dense operations table and a pricing page share almost nothing.
+1. **Surface kind.** Marketing page, product screen, internal tool, dashboard, editorial, portfolio, onboarding flow. This alone rules out most of the decision space, since a dense operations table and a pricing page share almost nothing. When the vertical is clear, also name one or two **domain tags** from design-inspiration's taxonomy (`finance`, `developer-tools`, `editorial`, and peers) so a later inspiration lookup can filter the seed without opening blog refs for a finance app.
 2. **Audience, and what they are doing when they arrive.** A procurement committee comparing vendors, an operator who lives in this screen eight hours a day, a recruiter scanning for thirty seconds, a customer who is annoyed and looking for a refund. What they are doing matters more than who they are.
 3. **What they already use.** People read a new interface against the ones they know. Naming the two or three products the audience uses daily tells you which conventions are invisible to them and which will feel foreign.
-4. **References, and what specifically is wanted from each.** "Like Linear" is not a reference until it says which part: the density, the typography, the restraint, the keyboard-first interaction. Call the Skill tool with "design-inspiration" for how to take a reference apart without copying it.
+4. **References, and what specifically is wanted from each.** "Like Linear" is not a reference until it says which part: the density, the typography, the restraint, the keyboard-first interaction. Call the Skill tool with "design-inspiration" for how to take a reference apart without copying it, and pass the domain tag(s) from the read so it filters the store first.
 5. **The dials.** Variance, motion and density, set from everything above. When you set those three, the mapping is in [dials.md](dials.md).
 6. **Constraints that override taste.** Accessibility-critical audiences, regulated or public-sector contexts, low-bandwidth or older devices, trust-first commerce, products used by children, an existing brand you do not own. These are not inputs to be balanced against aesthetics. They win.
 
 ## State it in one line
 
-Before any building, say the read out loud in a single sentence: **this is a `<surface kind>` for `<audience doing what>`, in a `<language>`, at `<variance>/<motion>/<density>`.**
+Before any building, say the read out loud in a single sentence: **this is a `<surface kind>` for `<audience doing what>`, in a `<language>`, at `<variance>/<motion>/<density>`** (and name the domain tag when inspiration will be needed).
 
-- "An internal reconciliation dashboard for operators who live in it all day, information-dense and keyboard-first, at low/low/high."
-- "A pricing page for a procurement committee comparing three vendors, restrained and typographic, leaning on the existing design system, at low/low/medium."
-- "A portfolio for hiring managers scanning in thirty seconds, editorial and typographic, at high/medium/low."
+- "An internal reconciliation dashboard for operators who live in it all day, information-dense and keyboard-first, at low/low/high (domains: finance, ops-admin)."
+- "A pricing page for a procurement committee comparing three vendors, restrained and typographic, leaning on the existing design system, at low/low/medium (domains: infrastructure)."
+- "A portfolio for hiring managers scanning in thirty seconds, editorial and typographic, at high/medium/low (domains: portfolio)."
 
 That sentence is the artifact. It is what `design-review` scores against later, and what makes a disagreement about the design a disagreement about the read rather than about taste.
 

@@ -3,6 +3,10 @@ source: https://www.framer.com
 captured: 2026-09-17
 surface: design-tool marketing with a live canvas demo
 audience: teams deciding whether to design and publish a site in one product
+domains:
+  - creative-tools
+principles:
+  - product-as-proof
 motion: purposeful
 motion_complexity: simple
 motion_types:

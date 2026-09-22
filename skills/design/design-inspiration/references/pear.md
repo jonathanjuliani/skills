@@ -3,6 +3,12 @@ source: https://pear.no
 captured: 2026-09-12
 surface: text-led agency marketing with an apply form
 audience: founders with existing revenue deciding whether a revenue-share partner fits
+domains:
+  - studio-agency
+principles:
+  - restraint
+  - typographic
+  - trust-first
 verify_after: 2027-03-12
 ---
 

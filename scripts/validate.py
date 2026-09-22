@@ -241,6 +241,68 @@ for payload in sorted((ROOT / "skills/foundation/setup-skills").glob("*-block.md
             errors.append(f"{payload.relative_to(ROOT)}: marker '{marker}' appears "
                           f"{begins} begin / {ends} end, expected exactly one of each.")
 
+# Design-inspiration seed captures: closed-list domains/principles from taxonomy.md.
+# Keeps the progressive-disclosure indexes honest without inventing a second catalog.
+TAXONOMY = ROOT / "skills/design/design-inspiration/taxonomy.md"
+SEED_REFS = ROOT / "skills/design/design-inspiration/references"
+if TAXONOMY.exists() and yaml is not None:
+    tax_text = TAXONOMY.read_text()
+    # Principles share the same table-row shape; split by section headers.
+    domain_section = re.search(
+        r"## Domains\n(.*?)(?=\n## Principles\n)", tax_text, re.S)
+    principle_section = re.search(
+        r"## Principles\n(.*?)(?=\n## )", tax_text, re.S)
+    allowed_domains = set()
+    if domain_section:
+        allowed_domains = set(re.findall(r"^\| `([a-z0-9-]+)` \|", domain_section.group(1), re.M))
+    allowed_principles = set()
+    if principle_section:
+        allowed_principles = set(re.findall(r"^\| `([a-z0-9-]+)` \|", principle_section.group(1), re.M))
+    if not allowed_domains or not allowed_principles:
+        errors.append("skills/design/design-inspiration/taxonomy.md: could not parse "
+                      "domain or principle closed lists from the tables")
+    else:
+        for path in sorted(SEED_REFS.glob("*.md")):
+            if path.name == "README.md":
+                continue
+            rel = path.relative_to(ROOT)
+            text = path.read_text()
+            if not text.startswith("---\n"):
+                errors.append(f"{rel}: seed capture missing frontmatter")
+                continue
+            parts = text.split("---\n", 2)
+            if len(parts) != 3:
+                errors.append(f"{rel}: seed capture frontmatter is malformed")
+                continue
+            try:
+                fm = yaml.safe_load(parts[1]) or {}
+            except yaml.YAMLError as exc:
+                errors.append(f"{rel}: seed capture frontmatter is not valid YAML. {exc}")
+                continue
+            domains = fm.get("domains")
+            if not isinstance(domains, list) or not domains:
+                errors.append(f"{rel}: seed capture requires a non-empty 'domains' list")
+            else:
+                if len(domains) > 3:
+                    errors.append(f"{rel}: 'domains' has {len(domains)} values, max is 3")
+                for tag in domains:
+                    if tag not in allowed_domains:
+                        errors.append(f"{rel}: unknown domain '{tag}' "
+                                      f"(not in taxonomy.md Domains)")
+            principles = fm.get("principles")
+            if principles is not None:
+                if not isinstance(principles, list):
+                    errors.append(f"{rel}: 'principles' must be a YAML list when present")
+                else:
+                    if len(principles) > 4:
+                        errors.append(f"{rel}: 'principles' has {len(principles)} values, max is 4")
+                    for tag in principles:
+                        if tag not in allowed_principles:
+                            errors.append(f"{rel}: unknown principle '{tag}' "
+                                          f"(not in taxonomy.md Principles)")
+elif TAXONOMY.exists() and yaml is None:
+    warnings.append("design-inspiration seed taxonomy check skipped (pyyaml missing)")
+
 # No silent external dependency. A bare `/name` for something this pack does not
 # ship reads as though the reader has it, which breaks the moment they do not.
 for f in sorted([*ROOT.glob("skills/**/*.md"), *ROOT.glob("docs/**/*.md"), ROOT / "README.md"]):

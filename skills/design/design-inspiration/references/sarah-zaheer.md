@@ -3,6 +3,12 @@ source: https://sarahzaheer.site
 captured: 2026-09-11
 surface: editorial designer portfolio
 audience: hiring managers and collaborators scanning a personal site
+domains:
+  - portfolio
+  - editorial
+principles:
+  - editorial-voice
+  - typographic
 verify_after: 2027-03-11
 ---
 

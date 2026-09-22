@@ -3,6 +3,11 @@ source: https://bruno-simon.com
 captured: 2026-09-17
 surface: developer portfolio that is a playable 3D world
 audience: hiring managers and peers judging a creative technologist
+domains:
+  - portfolio
+  - creative-tools
+principles:
+  - product-as-proof
 motion: cinematic
 motion_complexity: high
 motion_types:

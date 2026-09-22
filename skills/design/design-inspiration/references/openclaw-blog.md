@@ -3,6 +3,13 @@ source: https://openclaw.ai/blog
 captured: 2026-09-14
 surface: product engineering blog index with topic filters
 audience: builders and operators following releases, security, and onboarding notes
+domains:
+  - editorial
+  - ai-ml
+  - developer-tools
+principles:
+  - editorial-voice
+  - density
 motion: minimal
 verify_after: 2027-03-14
 ---

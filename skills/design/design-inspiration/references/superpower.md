@@ -3,6 +3,11 @@ source: https://superpower.com
 captured: 2026-09-12
 surface: consumer health membership marketing homepage
 audience: people comparing proactive lab testing against a normal physical
+domains:
+  - health
+principles:
+  - trust-first
+  - product-as-proof
 verify_after: 2027-03-12
 ---
 

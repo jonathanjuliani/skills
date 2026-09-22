@@ -3,6 +3,12 @@ source: https://openclaw.ai
 captured: 2026-09-14
 surface: open-source AI assistant marketing homepage with install paths
 audience: developers and power users deciding to run a personal agent locally
+domains:
+  - ai-ml
+  - developer-tools
+principles:
+  - product-as-proof
+  - trust-first
 motion: purposeful
 verify_after: 2027-03-14
 ---

@@ -3,6 +3,11 @@ source: https://www.canopyservicing.com
 captured: 2026-09-11
 surface: B2B fintech marketing
 audience: commercial lenders evaluating a loan-management system
+domains:
+  - finance
+principles:
+  - trust-first
+  - product-as-proof
 verify_after: 2027-03-11
 ---
 

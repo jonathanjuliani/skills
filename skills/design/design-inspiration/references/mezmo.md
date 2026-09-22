@@ -3,6 +3,14 @@ source: https://www.mezmo.com
 captured: 2026-09-14
 surface: SRE agent product marketing with operational workflow density
 audience: SRE and platform teams evaluating governed agents in production
+domains:
+  - ops-admin
+  - ai-ml
+  - infrastructure
+principles:
+  - density
+  - operator-speed
+  - product-as-proof
 motion: purposeful
 verify_after: 2027-03-14
 ---

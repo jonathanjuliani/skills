@@ -3,6 +3,13 @@ source: https://reapi.ai
 captured: 2026-09-14
 surface: agent-first API documentation home for a multimodal AI gateway
 audience: developers and agents integrating image, video, audio, and chat models over one HTTP API
+domains:
+  - developer-tools
+  - ai-ml
+principles:
+  - density
+  - task-focused
+  - restraint
 motion: minimal
 verify_after: 2027-03-14
 ---

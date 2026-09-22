@@ -3,6 +3,11 @@ source: https://www.formabledocs.com
 captured: 2026-09-12
 surface: B2B SaaS product marketing with live UI in the hero
 audience: legal and ops teams evaluating contract review, redline, and e-sign tools
+domains:
+  - legal
+principles:
+  - product-as-proof
+  - trust-first
 verify_after: 2027-03-12
 ---
 

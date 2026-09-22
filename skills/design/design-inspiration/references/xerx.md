@@ -3,6 +3,12 @@ source: https://www.xerx.io/en
 captured: 2026-09-14
 surface: indie web and AI studio marketing for founders
 audience: founders and marketing teams hiring a small multi-discipline studio
+domains:
+  - studio-agency
+  - ai-ml
+principles:
+  - typographic
+  - restraint
 motion: purposeful
 verify_after: 2027-03-14
 ---

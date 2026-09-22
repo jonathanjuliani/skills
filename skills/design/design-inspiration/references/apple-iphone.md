@@ -3,6 +3,10 @@ source: https://www.apple.com/iphone
 captured: 2026-09-17
 surface: product-family marketing with a film of the device
 audience: shoppers comparing iPhone models they already know
+domains:
+  - hardware-commerce
+principles:
+  - product-as-proof
 motion: cinematic
 motion_complexity: medium
 motion_types:

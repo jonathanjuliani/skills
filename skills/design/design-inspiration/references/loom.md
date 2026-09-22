@@ -3,6 +3,10 @@ source: https://www.loom.com
 captured: 2026-09-12
 surface: asymmetric product marketing for screen recording
 audience: teams choosing async video messaging over long meetings
+domains:
+  - productivity
+principles:
+  - product-as-proof
 verify_after: 2027-03-12
 ---
 

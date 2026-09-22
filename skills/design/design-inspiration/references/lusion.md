@@ -3,6 +3,11 @@ source: https://lusion.co
 captured: 2026-09-17
 surface: studio marketing that loads as a 3D world
 audience: brands hiring a WebGL-first digital studio
+domains:
+  - studio-agency
+  - creative-tools
+principles:
+  - product-as-proof
 motion: cinematic
 motion_complexity: high
 motion_types:

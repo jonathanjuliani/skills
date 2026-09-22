@@ -3,6 +3,12 @@ source: https://www.photopea.com
 captured: 2026-09-13
 surface: raster and vector photo editor canvas application
 audience: people editing images in the browser with desktop-class tool density
+domains:
+  - creative-tools
+principles:
+  - density
+  - operator-speed
+  - task-focused
 motion: purposeful
 verify_after: 2027-03-13
 ---

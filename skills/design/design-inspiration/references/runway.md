@@ -3,6 +3,11 @@ source: https://runway.com
 captured: 2026-09-11
 surface: AI-lab marketing homepage
 audience: creatives and enterprises evaluating generative video
+domains:
+  - ai-ml
+  - creative-tools
+principles:
+  - product-as-proof
 motion: cinematic
 motion_complexity: simple
 motion_types:

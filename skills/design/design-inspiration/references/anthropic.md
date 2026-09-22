@@ -3,6 +3,11 @@ source: https://www.anthropic.com
 captured: 2026-09-17
 surface: research-lab marketing homepage with rearranging headline type
 audience: enterprises and researchers deciding whether this lab's models and safety story fit
+domains:
+  - ai-ml
+principles:
+  - typographic
+  - trust-first
 motion: purposeful
 motion_complexity: simple
 motion_types:

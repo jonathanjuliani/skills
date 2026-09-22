@@ -3,6 +3,11 @@ source: https://github.com
 captured: 2026-09-11
 surface: developer-platform marketing homepage
 audience: developers deciding where to host and ship code
+domains:
+  - developer-tools
+principles:
+  - product-as-proof
+  - trust-first
 verify_after: 2027-03-11
 ---
 

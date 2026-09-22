@@ -3,6 +3,13 @@ source: https://www.raycast.com
 captured: 2026-09-12
 surface: panel-grid product marketing for a launcher
 audience: professionals evaluating a keyboard-first productivity launcher
+domains:
+  - productivity
+  - developer-tools
+principles:
+  - keyboard-first
+  - density
+  - product-as-proof
 verify_after: 2027-03-12
 ---
 

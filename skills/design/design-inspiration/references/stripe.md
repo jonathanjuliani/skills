@@ -3,6 +3,14 @@ source: https://stripe.com/en-br
 captured: 2026-09-11
 surface: payments-infrastructure marketing
 audience: founders and finance teams choosing payment rails
+domains:
+  - payments
+  - finance
+  - developer-tools
+principles:
+  - trust-first
+  - restraint
+  - product-as-proof
 verify_after: 2027-03-11
 ---
 

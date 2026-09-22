@@ -3,6 +3,12 @@ source: https://www.coingecko.com
 captured: 2026-09-12
 surface: dense cryptocurrency market table with category filters
 audience: traders and researchers scanning prices, market caps, and movers
+domains:
+  - crypto-defi
+principles:
+  - density
+  - operator-speed
+  - search-first
 verify_after: 2027-03-12
 ---
 

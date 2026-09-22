@@ -3,6 +3,12 @@ source: https://www.papermark.com
 captured: 2026-09-14
 surface: open-source VDR marketing with agent and docs-first structure
 audience: founders, funds, and advisors running permissioned deal rooms
+domains:
+  - legal
+  - finance
+principles:
+  - trust-first
+  - product-as-proof
 motion: minimal
 verify_after: 2027-03-14
 ---

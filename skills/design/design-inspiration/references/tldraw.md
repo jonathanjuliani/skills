@@ -3,6 +3,11 @@ source: https://www.tldraw.com
 captured: 2026-09-12
 surface: collaborative whiteboard canvas application
 audience: people who need an instant shared drawing surface without setup
+domains:
+  - creative-tools
+principles:
+  - task-focused
+  - restraint
 motion: purposeful
 verify_after: 2027-03-12
 ---

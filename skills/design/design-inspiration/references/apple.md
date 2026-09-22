@@ -3,6 +3,11 @@ source: https://www.apple.com
 captured: 2026-09-11
 surface: consumer product marketing homepage
 audience: shoppers comparing a device they already know
+domains:
+  - hardware-commerce
+principles:
+  - product-as-proof
+  - restraint
 motion: cinematic
 motion_complexity: medium
 motion_types:

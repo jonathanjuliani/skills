@@ -3,6 +3,11 @@ source: https://dennissnellenberg.com
 captured: 2026-09-17
 surface: designer-developer portfolio with a greeting preloader and portrait hero
 audience: hiring managers scanning a freelancer in seconds
+domains:
+  - portfolio
+principles:
+  - typographic
+  - task-focused
 motion: cinematic
 motion_complexity: medium
 motion_types:

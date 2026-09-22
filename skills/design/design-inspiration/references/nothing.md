@@ -3,6 +3,11 @@ source: https://nothing.tech
 captured: 2026-09-17
 surface: hardware commerce homepage with full-bleed product photography
 audience: shoppers comparing phones, earbuds, and headphones
+domains:
+  - hardware-commerce
+principles:
+  - product-as-proof
+  - restraint
 motion: purposeful
 motion_complexity: medium
 motion_types:

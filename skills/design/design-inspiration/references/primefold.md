@@ -3,6 +3,13 @@ source: https://primefold.ai
 captured: 2026-09-11
 surface: B2B intelligence marketing
 audience: operators who want answers from messy operational data
+domains:
+  - ops-admin
+  - ai-ml
+principles:
+  - density
+  - operator-speed
+  - product-as-proof
 verify_after: 2027-03-11
 ---
 

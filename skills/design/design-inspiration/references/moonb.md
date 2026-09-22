@@ -3,6 +3,10 @@ source: https://www.moonb.io
 captured: 2026-09-11
 surface: creative-studio marketing
 audience: brand and marketing leads buying an outsourced creative team
+domains:
+  - studio-agency
+principles:
+  - product-as-proof
 verify_after: 2027-03-11
 ---
 

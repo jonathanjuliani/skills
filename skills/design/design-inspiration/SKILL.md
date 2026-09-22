@@ -44,11 +44,11 @@ Treat the output as a **starting point to edit, never a result to ship**:
 
 ## Capture what you found
 
-A reference read and discarded teaches once. When you write the store entry, use the format and the rules in [capture.md](capture.md). Write the findings to the personal store at `~/.jon-skills/design/references/`, one file per reference, recording what you took, **what you rejected and why**, the surface and audience it came from, and a date.
+A reference read and discarded teaches once. When you write the store entry, use the format and the rules in [capture.md](capture.md). Write the findings to the personal store at `~/.jon-skills/design/references/`, one file per reference, recording what you took, **what you rejected and why**, the surface and audience it came from, domains from [taxonomy.md](taxonomy.md), optional principles, and a date.
 
 A shipped seed lives in [references/](references/). It is the community tier of this store: starter reads that travel with the plugin. The personal store outranks it. New captures go to the personal store unless the user asks to ship them.
 
-Offer this rather than doing it silently, and check both stores before a new read: two or three entries with a similar surface and audience are worth more than the whole thing. Personal first, then the shipped seed, then [patterns.md](patterns.md). When those stores are thin for this surface and audience, or the user wants the base updated from galleries, Call the Skill tool with "curate-design-inspiration" (it will confirm before any crawl or write).
+Offer this rather than doing it silently. Before a new read, follow the progressive-disclosure gate in [capture.md](capture.md): from the brief, filter personal frontmatter and the seed indexes in [references/README.md](references/README.md) by domain (then archetype, motion, principles), and open at most two or three matching files. Do not load the whole store. Personal first, then the shipped seed, then [patterns.md](patterns.md). When those stores are thin for this surface, audience, and domain, or the user wants the base updated from galleries, Call the Skill tool with "curate-design-inspiration" (it will confirm before any crawl or write).
 
 ## Know convention from signature
 

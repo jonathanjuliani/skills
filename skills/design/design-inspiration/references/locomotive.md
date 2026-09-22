@@ -3,6 +3,11 @@ source: https://locomotive.ca/en
 captured: 2026-09-17
 surface: digital-agency marketing with scramble-text entrance and photography hero
 audience: brands hiring a digital-first studio
+domains:
+  - studio-agency
+principles:
+  - typographic
+  - product-as-proof
 motion: cinematic
 motion_complexity: medium
 motion_types:

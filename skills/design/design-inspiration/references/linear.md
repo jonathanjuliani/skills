@@ -3,6 +3,14 @@ source: https://linear.app
 captured: 2026-09-11
 surface: product marketing with a live product canvas
 audience: product teams evaluating a dense issue tracker
+domains:
+  - productivity
+  - developer-tools
+principles:
+  - density
+  - keyboard-first
+  - product-as-proof
+  - restraint
 motion: purposeful
 motion_complexity: simple
 motion_types:

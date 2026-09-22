@@ -3,6 +3,11 @@ source: https://cuberto.com
 captured: 2026-09-17
 surface: studio marketing with a still headline over a moving work collage
 audience: companies hiring a product and brand studio
+domains:
+  - studio-agency
+principles:
+  - typographic
+  - product-as-proof
 motion: cinematic
 motion_complexity: high
 motion_types:

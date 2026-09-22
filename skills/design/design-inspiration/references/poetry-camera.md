@@ -3,6 +3,12 @@ source: https://poetry.camera
 captured: 2026-09-12
 surface: hardware product marketing for a single creative device
 audience: artists, educators, and curious buyers deciding whether to buy or DIY a poetry camera
+domains:
+  - hardware-commerce
+  - creative-tools
+principles:
+  - task-focused
+  - restraint
 verify_after: 2027-03-12
 ---
 

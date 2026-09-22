@@ -3,6 +3,10 @@ source: https://www.figma.com
 captured: 2026-09-11
 surface: canvas-tool marketing homepage
 audience: design and product teams choosing a collaborative canvas
+domains:
+  - creative-tools
+principles:
+  - product-as-proof
 verify_after: 2027-03-11
 ---
 

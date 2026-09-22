@@ -3,6 +3,11 @@ source: https://www.duolingo.com
 captured: 2026-09-17
 surface: consumer learning marketing with a character as the product
 audience: people deciding to start a language habit
+domains:
+  - education
+principles:
+  - product-as-proof
+  - task-focused
 motion: purposeful
 motion_complexity: medium
 motion_types:

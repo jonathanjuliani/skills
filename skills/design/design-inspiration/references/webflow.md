@@ -3,6 +3,10 @@ source: https://webflow.com
 captured: 2026-09-17
 surface: site-platform marketing with live product panels
 audience: marketing and site teams choosing a web platform
+domains:
+  - creative-tools
+principles:
+  - product-as-proof
 motion: purposeful
 motion_complexity: medium
 motion_types:

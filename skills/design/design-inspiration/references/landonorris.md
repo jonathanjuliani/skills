@@ -3,6 +3,11 @@ source: https://landonorris.com
 captured: 2026-09-17
 surface: athlete brand site with a named load into a 3D portrait
 audience: fans and partners entering a driver's world
+domains:
+  - portfolio
+  - hardware-commerce
+principles:
+  - product-as-proof
 motion: cinematic
 motion_complexity: high
 motion_types:

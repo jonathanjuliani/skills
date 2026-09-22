@@ -3,6 +3,12 @@ source: https://www.are.na
 captured: 2026-09-12
 surface: collection and channel marketing for a saving toolkit
 audience: creatives building personal research libraries without algorithmic feeds
+domains:
+  - creative-tools
+  - social
+principles:
+  - editorial-voice
+  - restraint
 verify_after: 2027-03-12
 ---
 

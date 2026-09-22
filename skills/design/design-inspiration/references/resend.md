@@ -3,6 +3,12 @@ source: https://resend.com
 captured: 2026-09-12
 surface: text-led developer product documentation home
 audience: developers choosing an email API and needing clear entry points
+domains:
+  - developer-tools
+principles:
+  - restraint
+  - typographic
+  - trust-first
 verify_after: 2027-03-12
 ---
 

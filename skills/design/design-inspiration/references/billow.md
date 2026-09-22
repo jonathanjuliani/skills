@@ -3,6 +3,12 @@ source: https://www.billow.so
 captured: 2026-09-11
 surface: freelancer-ops SaaS marketing
 audience: independents consolidating leads, projects, and invoices
+domains:
+  - productivity
+  - finance
+principles:
+  - task-focused
+  - product-as-proof
 verify_after: 2027-03-11
 ---
 

@@ -11,7 +11,7 @@ The defining constraint: **confirm with the user before any gallery crawl or sto
 
 ## When to reach for this
 
-- The personal store is thin (roughly under fifteen entries), or fewer than two or three entries match the current surface and audience.
+- The personal store is thin (roughly under fifteen entries), or fewer than two or three entries match the current surface, audience, and domain.
 - The user asks to populate, update, or curate the inspiration base from galleries.
 - Call the Skill tool with "design-inspiration" has already checked the store and found not enough for the read.
 
@@ -19,14 +19,14 @@ Always stop and confirm scope before continuing. If the user declines, stop.
 
 ## The flow
 
-1. **Read the stores first.** Scan `~/.jon-skills/design/references/` and the shipped seed under `design-inspiration/references/` (use its [README index](../design-inspiration/references/README.md) and each file's `source` frontmatter). Build the set of sources already captured. Normalize URLs: lowercase host, strip `www.`, trailing slash, and tracking query params.
-2. **Confirm scope.** Ask which sources from [sources.md](sources.md) for this session (read it when choosing galleries, not before they have agreed to a crawl), which categories (or "discover the main ones"), how many examples per category (default two or three), and confirm destination is the personal store. Do not start browsing until they agree.
-3. **Map categories from the galleries.** Use the tags, collections, and filters the sources themselves expose. Cross with the archetypes in [patterns.md](../design-inspiration/patterns.md) and the motion levels in [motion.md](../design-inspiration/motion.md) only to prioritize gaps (landing text-led / product-led / editorial; app list-detail / dense table / focused task / canvas; motion minimal / purposeful / cinematic). Prefer *product* URLs for app archetypes (issues list, checkout, canvas editor), not the marketing homepage of the same brand.
+1. **Read the stores first.** Scan frontmatter only in `~/.jon-skills/design/references/` and the shipped seed under `design-inspiration/references/` (use its [README index](../design-inspiration/references/README.md) and each file's `source` frontmatter). Build the set of sources already captured. Do not open capture bodies for existence checks. Normalize URLs: lowercase host, strip `www.`, trailing slash, and tracking query params.
+2. **Confirm scope.** Ask which sources from [sources.md](sources.md) for this session (read it when choosing galleries, not before they have agreed to a crawl), which domain gaps from [taxonomy.md](../design-inspiration/taxonomy.md) matter (for example "finance dense-table"), which gallery categories (or "discover the main ones"), how many examples per category (default two or three), and confirm destination is the personal store. Do not start browsing until they agree.
+3. **Map categories from the galleries.** Use the tags, collections, and filters the sources themselves expose. Cross with taxonomy domains, the archetypes in [patterns.md](../design-inspiration/patterns.md), and the motion levels in [motion.md](../design-inspiration/motion.md) only to prioritize gaps (domain first; then landing text-led / product-led / editorial; app list-detail / dense table / focused task / canvas; motion minimal / purposeful / cinematic). Prefer *product* URLs for app archetypes (issues list, checkout, canvas editor), not the marketing homepage of the same brand.
 4. **Pick candidates.** Few, current, with the *project* URL (the live site), never only the award or gallery page.
 5. **Dedupe before any read or write.** If a normalized `source` already exists in personal or seed, skip it. Also match obvious slug to filename (for example `linear.app` against `linear.md`). Never create a second file for the same project. If `verify_after` has passed and this session is an *update*, offer to refresh the existing file in place; only rewrite after confirmation.
 6. **Read the project** with the discipline of design-inspiration: structure, hierarchy, density, type, colour, motion, copy. Call the Skill tool with "design-inspiration" for the read method when needed. Screenshots may help you see the page in-session; never persist images into the store.
-7. **Write** one markdown file per new reference to `~/.jon-skills/design/references/`, using the format and rules in [capture.md](../design-inspiration/capture.md): Taken, Rejected, Not applicable; findings never measurements; identity never enters.
-8. **Summarize.** What was added, what was skipped as duplicate, which gaps remain, and offer to ship into the plugin seed only if the user asks.
+7. **Write** one markdown file per new reference to `~/.jon-skills/design/references/`, using the format and rules in [capture.md](../design-inspiration/capture.md): Taken, Rejected, Not applicable; required `domains` from [taxonomy.md](../design-inspiration/taxonomy.md); principles when the read is clear; findings never measurements; identity never enters.
+8. **Summarize.** What was added, what was skipped as duplicate, which domain and archetype gaps remain, and offer to ship into the plugin seed only if the user asks.
 
 Prefer a small confirmed batch over a wide automatic sweep. One or two sources and a handful of categories beat all of [sources.md](sources.md) in one go.
 
@@ -45,7 +45,7 @@ Before every write:
 - **Gallery is not the reference.** Capture the linked project. The gallery page is only a finder.
 - **Findings, not pixels.** No screenshots in the store. The durable artifact is the capture markdown.
 - **Personal store by default.** Shipping into the plugin is an explicit ask.
-- **Stop early when covered.** Two or three relevant entries for the surface and audience are enough; do not pad the store.
+- **Stop early when covered.** Two or three relevant entries for the surface, audience, and domain are enough; do not pad the store.
 
 ## Excuses that do not hold
 
@@ -57,8 +57,8 @@ Before every write:
 
 ## When this does not apply
 
-Skip this when the store already has enough entries for the surface and audience in front of you, when the user has named a specific reference to read (that is design-inspiration alone), and when the project already has an established design language so inspiration import is the wrong move. The confirm gate still applies if you reached here by mistake: ask, and stop if they decline.
+Skip this when the store already has enough entries for the surface, audience, and domain in front of you, when the user has named a specific reference to read (that is design-inspiration alone), and when the project already has an established design language so inspiration import is the wrong move. The confirm gate still applies if you reached here by mistake: ask, and stop if they decline.
 
 ## Before you hand it over
 
-Check the batch for three failures specific to this skill: a write that happened without confirmation, a duplicate `source` that slipped past normalization, and a capture that stored identity or measurements instead of findings. Then list skips and remaining gaps honestly.
+Check the batch for three failures specific to this skill: a write that happened without confirmation, a duplicate `source` that slipped past normalization, and a capture that stored identity or measurements instead of findings (or skipped required `domains`). Then list skips and remaining gaps honestly.

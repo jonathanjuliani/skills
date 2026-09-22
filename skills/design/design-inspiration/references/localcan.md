@@ -3,6 +3,12 @@ source: https://www.localcan.com
 captured: 2026-09-14
 surface: text-led developer tunneling tool marketing
 audience: developers, designers, and agents sharing localhost without deploying
+domains:
+  - developer-tools
+principles:
+  - restraint
+  - trust-first
+  - typographic
 motion: purposeful
 verify_after: 2027-03-14
 ---

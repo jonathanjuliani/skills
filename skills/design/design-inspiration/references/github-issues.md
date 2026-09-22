@@ -3,6 +3,13 @@ source: https://github.com/vercel/next.js/issues
 captured: 2026-09-13
 surface: product issue list with filter chrome and row-to-detail
 audience: contributors and maintainers triaging open work on a public repo
+domains:
+  - developer-tools
+  - ops-admin
+principles:
+  - density
+  - operator-speed
+  - keyboard-first
 motion: minimal
 verify_after: 2027-03-13
 ---

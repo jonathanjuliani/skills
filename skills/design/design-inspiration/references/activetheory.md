@@ -3,6 +3,11 @@ source: https://activetheory.net
 captured: 2026-09-17
 surface: studio marketing that is a 3D object in a particle field
 audience: brands hiring a campaign and WebGL studio
+domains:
+  - studio-agency
+  - creative-tools
+principles:
+  - product-as-proof
 motion: cinematic
 motion_complexity: high
 motion_types:

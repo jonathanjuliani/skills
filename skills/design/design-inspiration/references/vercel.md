@@ -3,6 +3,13 @@ source: https://vercel.com
 captured: 2026-09-12
 surface: panel and section marketing for infrastructure
 audience: teams and agents shipping apps who need deploy, sandbox, and platform primitives
+domains:
+  - infrastructure
+  - developer-tools
+  - ai-ml
+principles:
+  - product-as-proof
+  - density
 verify_after: 2027-03-12
 ---
 

@@ -3,6 +3,13 @@ source: https://news.ycombinator.com
 captured: 2026-09-12
 surface: ranked list with comment-thread detail
 audience: technologists scanning stories and diving into discussion
+domains:
+  - social
+  - developer-tools
+principles:
+  - density
+  - restraint
+  - editorial-voice
 motion: minimal
 verify_after: 2027-03-12
 ---

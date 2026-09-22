@@ -3,6 +3,11 @@ source: https://lenis.dev
 captured: 2026-09-17
 surface: smooth-scroll library marketing that uses scroll as the demo
 audience: developers and studios adding controllable scroll to a site
+domains:
+  - developer-tools
+  - creative-tools
+principles:
+  - product-as-proof
 motion: purposeful
 motion_complexity: simple
 motion_types:

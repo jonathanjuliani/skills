@@ -3,6 +3,12 @@ source: https://gsap.com
 captured: 2026-09-17
 surface: animation-library marketing that uses type as the demo
 audience: developers and motion designers choosing a timeline tool
+domains:
+  - creative-tools
+  - developer-tools
+principles:
+  - typographic
+  - product-as-proof
 motion: cinematic
 motion_complexity: simple
 motion_types:

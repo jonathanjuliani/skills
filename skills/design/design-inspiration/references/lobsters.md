@@ -3,6 +3,13 @@ source: https://lobste.rs
 captured: 2026-09-13
 surface: tagged story list with comment-thread detail
 audience: practitioners scanning peer-shared links and diving into discussion
+domains:
+  - social
+  - developer-tools
+principles:
+  - density
+  - restraint
+  - editorial-voice
 motion: minimal
 verify_after: 2027-03-13
 ---

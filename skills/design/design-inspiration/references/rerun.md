@@ -3,6 +3,14 @@ source: https://rerun.io
 captured: 2026-09-14
 surface: technical data-layer docs and product home for Physical AI
 audience: robotics and multimodal AI teams inspecting, querying, and training on sensor data
+domains:
+  - ai-ml
+  - developer-tools
+  - infrastructure
+principles:
+  - density
+  - product-as-proof
+  - operator-speed
 motion: minimal
 verify_after: 2027-03-14
 ---

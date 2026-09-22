@@ -3,6 +3,11 @@ source: https://defillama.com
 captured: 2026-09-12
 surface: dense protocol rankings table with metric controls
 audience: operators comparing DeFi protocols by TVL, fees, and volume
+domains:
+  - crypto-defi
+principles:
+  - density
+  - operator-speed
 verify_after: 2027-03-12
 ---
 

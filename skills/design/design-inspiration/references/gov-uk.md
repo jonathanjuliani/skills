@@ -3,6 +3,12 @@ source: https://www.gov.uk
 captured: 2026-09-11
 surface: public-sector service directory
 audience: residents looking for a specific government task
+domains:
+  - public-sector
+principles:
+  - trust-first
+  - restraint
+  - task-focused
 motion: minimal
 verify_after: 2027-03-11
 ---

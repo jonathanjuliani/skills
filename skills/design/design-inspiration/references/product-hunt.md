@@ -3,6 +3,12 @@ source: https://www.producthunt.com
 captured: 2026-09-13
 surface: ranked product launch list with upvote and detail
 audience: builders and curious buyers scanning today's launches before diving into one product
+domains:
+  - marketplace
+  - developer-tools
+principles:
+  - density
+  - search-first
 motion: minimal
 verify_after: 2027-03-13
 ---

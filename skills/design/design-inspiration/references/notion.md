@@ -3,6 +3,11 @@ source: https://www.notion.so
 captured: 2026-09-11
 surface: workspace marketing, and the login wall the live site currently serves
 audience: knowledge-work teams, then returning users signing in
+domains:
+  - productivity
+principles:
+  - product-as-proof
+  - restraint
 verify_after: 2027-03-11
 ---
 

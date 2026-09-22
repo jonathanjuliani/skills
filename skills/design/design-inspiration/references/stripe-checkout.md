@@ -3,6 +3,12 @@ source: https://checkout.stripe.dev/checkout
 captured: 2026-09-13
 surface: focused hosted checkout with live preview
 audience: a buyer completing payment for one product, and builders inspecting checkout configuration
+domains:
+  - payments
+principles:
+  - task-focused
+  - trust-first
+  - restraint
 motion: purposeful
 verify_after: 2027-03-13
 ---

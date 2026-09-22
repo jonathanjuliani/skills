@@ -3,6 +3,11 @@ source: https://www.cloaked.com
 captured: 2026-09-12
 surface: consumer privacy marketing homepage
 audience: people worried about spam, scams, and identity theft deciding to start a privacy membership
+domains:
+  - security
+principles:
+  - trust-first
+  - restraint
 verify_after: 2027-03-12
 ---
 

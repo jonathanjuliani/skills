@@ -3,6 +3,13 @@ source: https://www.pinterest.com
 captured: 2026-09-17
 surface: consumer inspiration marketing with product frames of photo grids
 audience: people collecting visual ideas before they log in
+domains:
+  - social
+  - creative-tools
+  - marketplace
+principles:
+  - search-first
+  - product-as-proof
 motion: purposeful
 motion_complexity: simple
 motion_types:

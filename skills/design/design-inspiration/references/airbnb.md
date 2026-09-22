@@ -3,6 +3,11 @@ source: https://www.airbnb.com
 captured: 2026-09-17
 surface: marketplace home with listing cards and skeleton first paint
 audience: travelers scanning places to stay in a city they already have in mind
+domains:
+  - marketplace
+principles:
+  - search-first
+  - product-as-proof
 motion: purposeful
 motion_complexity: simple
 motion_types:

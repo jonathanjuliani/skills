@@ -3,6 +3,13 @@ source: https://www.makingsoftware.com
 captured: 2026-09-14
 surface: illustrated reference-manual marketing with dense chapter index
 audience: designers and builders who want systems literacy, not a tutorial checklist
+domains:
+  - editorial
+  - developer-tools
+principles:
+  - editorial-voice
+  - density
+  - typographic
 motion: minimal
 verify_after: 2027-03-14
 ---

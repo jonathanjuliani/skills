@@ -3,6 +3,13 @@ source: https://www.coderabbit.ai
 captured: 2026-09-14
 surface: AI code-review product marketing with dense PR triage queues
 audience: engineering teams drowning in agent-generated pull requests
+domains:
+  - developer-tools
+  - ai-ml
+principles:
+  - density
+  - operator-speed
+  - product-as-proof
 motion: purposeful
 verify_after: 2027-03-14
 ---

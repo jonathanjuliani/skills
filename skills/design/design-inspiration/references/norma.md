@@ -3,6 +3,12 @@ source: https://nor.ma
 captured: 2026-09-11
 surface: hardware commerce landing
 audience: people trying to cut phone use, deciding to buy a disc
+domains:
+  - hardware-commerce
+  - health
+principles:
+  - trust-first
+  - restraint
 verify_after: 2027-03-11
 ---
 

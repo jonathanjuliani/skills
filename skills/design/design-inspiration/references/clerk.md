@@ -3,6 +3,12 @@ source: https://clerk.com
 captured: 2026-09-17
 surface: auth-component marketing with live sign-in and profile previews
 audience: developers embedding user management instead of building it
+domains:
+  - developer-tools
+  - security
+principles:
+  - product-as-proof
+  - task-focused
 motion: purposeful
 motion_complexity: simple
 motion_types:

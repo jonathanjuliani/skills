@@ -3,6 +3,10 @@ source: https://basement.studio
 captured: 2026-09-17
 surface: studio marketing with a 3D lobby and a human or machine mode
 audience: ambitious startups hiring a digital studio
+domains:
+  - studio-agency
+principles:
+  - product-as-proof
 motion: cinematic
 motion_complexity: medium
 motion_types:
