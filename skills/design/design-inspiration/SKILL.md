@@ -26,7 +26,7 @@ Work from the surface inward, and write down what you find as convention rather 
 3. **Density and rhythm.** How much sits in a given area, and whether the spacing follows a visible scale.
 4. **Type.** How many sizes and weights are actually in use. Restrained interfaces use far fewer than people expect.
 5. **Colour discipline.** How much of the surface is neutral, and what colour is reserved for.
-6. **Motion.** What moves, what it explains, and how long it takes. Assign intensity from [motion.md](motion.md): **minimal**, **purposeful**, or **cinematic**. When the motion is the reason for the read, also tag **complexity** (simple, medium, high) and **types** (loading, transition, text, image, scroll). When the user asks for more motion on a surface, filter the seed matrix in [references/README.md](references/README.md) against the brief, then open those files.
+6. **Motion.** What moves, what it explains, and how long it takes. Assign intensity from [motion.md](motion.md): **minimal**, **purposeful**, or **cinematic**. When the motion is the reason for the read, also tag **complexity** (simple, medium, high) and **types** (loading, transition, text, image, scroll). When the user asks for more motion on a surface *and* a store lookup is needed, follow [store-selection.md](store-selection.md) (it filters the seed matrix among other tiers) before opening capture files.
 7. **Copy.** Whether it is specific or generic. Specificity is a design property, and it is usually the thing that makes a reference feel credible.
 
 Then state the transferable finding in one line each: "type is two weights and four sizes, no more", not "headings are 34px Inter Semibold".
@@ -44,11 +44,11 @@ Treat the output as a **starting point to edit, never a result to ship**:
 
 ## Capture what you found
 
-A reference read and discarded teaches once. When you write the store entry, use the format and the rules in [capture.md](capture.md). Write the findings to the personal store at `~/.jon-skills/design/references/`, one file per reference, recording what you took, **what you rejected and why**, the surface and audience it came from, domains from [taxonomy.md](taxonomy.md), optional principles, and a date.
+A reference read and discarded teaches once. When you write the store entry, use the format and the rules in [capture.md](capture.md). Write the findings to the personal store at `~/.jon-skills/design/references/` (or another personal path confirmed this session), one file per reference, recording what you took, **what you rejected and why**, the surface and audience it came from, domains from [taxonomy.md](taxonomy.md), optional principles, and a date.
 
-A shipped seed lives in [references/](references/). It is the community tier of this store: starter reads that travel with the plugin. The personal store outranks it. New captures go to the personal store unless the user asks to ship them.
+A shipped seed lives in [references/](references/). It is the community tier of this store: starter reads that travel with the plugin. New captures go to the personal store unless the user asks to ship them. Which seed or personal entries feed *this* task is a confirmed working set, not a silent outrank.
 
-Offer this rather than doing it silently. Before a new read, follow the progressive-disclosure gate in [capture.md](capture.md): from the brief, filter personal frontmatter and the seed indexes in [references/README.md](references/README.md) by domain (then archetype, motion, principles), and open at most two or three matching files. Do not load the whole store. Personal first, then the shipped seed, then [patterns.md](patterns.md). When those stores are thin for this surface, audience, and domain, or the user wants the base updated from galleries, Call the Skill tool with "curate-design-inspiration" (it will confirm before any crawl or write).
+Offer capture rather than writing silently. When this task needs the inspiration *store* (not only a named live URL, screenshot, or paste), read [store-selection.md](store-selection.md) before opening any capture; stop until the user confirms the task working set. Do not load that companion when the store is unused. After the set is locked, open at most two or three bodies and follow [capture.md](capture.md). When the accepted set is thin for this surface, audience, and domain, or the user wants the base updated from galleries, Call the Skill tool with "curate-design-inspiration" (it will confirm before any crawl or write).
 
 ## Know convention from signature
 

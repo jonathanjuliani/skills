@@ -4,14 +4,14 @@ How a reference becomes a durable entry instead of a one-off reading. Without th
 
 ## Where it goes
 
-There are two stores, same format, different jobs.
+There are two default stores, same format, different jobs. Optional alternate paths exist only when the user opts in during selection.
 
-- **Personal:** `~/.jon-skills/design/references/`, one markdown file per reference. Per machine, writable after install, accumulates across projects. This is where new captures go.
-- **Shipped seed:** [references/](references/) in this skill. Travels with the plugin. Starter reads that cover the archetypes in [patterns.md](patterns.md) so the store is not empty on a fresh install. Outranked by the personal store.
+- **Personal (default):** `~/.jon-skills/design/references/`, one markdown file per reference. Per machine, writable after install, accumulates across projects. This is where new captures go unless this session confirmed another personal path.
+- **Shipped seed:** [references/](references/) in this skill. Travels with the plugin. Starter reads that cover the archetypes in [patterns.md](patterns.md) so the store is not empty on a fresh install.
 
 Shipping a new file into the plugin is an explicit ask. An installed plugin is otherwise a read-only bundle, which is why day-to-day capture is personal.
 
-This mirrors the precedence chain the rest of the plugin uses. For design the tiers read: the project's own tokens and screens, then a company brand, then the personal store, then the shipped seed, then the community conventions in [patterns.md](patterns.md). Higher always wins, and a captured note never outranks what the project already does.
+For design the durable tiers still read: the project's own tokens and screens, then a company brand, then personal and seed stores, then the community conventions in [patterns.md](patterns.md). A captured note never outranks what the project already does. Which personal or seed entries feed *this task* is not a silent outrank: confirm the working set via [store-selection.md](store-selection.md) when a store lookup is needed.
 
 ## The entry
 
@@ -66,13 +66,13 @@ Three sections, and the middle one carries half the value. **Rejected** is what 
 
 Progressive disclosure is a hard gate, not a hint. Do not open every capture body, and do not treat the full provenance table as the finding.
 
-1. **From the brief**, name domain(s), archetype, motion need, and optional principles. Call the Skill tool with "design-brief" if the read is missing. Domain tags come from [taxonomy.md](taxonomy.md).
-2. **Personal store first.** Scan frontmatter only (or filenames) for domain, surface, and audience overlap. Do not open bodies yet.
-3. **Shipped seed next.** Use the index tables in [references/README.md](references/README.md) only: **By domain** first, then intersect with archetype and/or motion (and principles when that is the reason for the read). Do not walk the directory of capture files.
-4. **Open at most two or three** capture files whose tags and audience fit. An entry from a different audience is evidence about that audience, not this one. Audience mismatch still wins over a domain match.
-5. **Never** load every seed body, treat a directory listing as the finding, or substitute the provenance table for reading the two or three files you selected.
+1. **Need-test.** If this task does not need a store lookup, skip the store entirely (named live URL, screenshot, paste, or direction without store). Do not open [store-selection.md](store-selection.md).
+2. **Confirm the working set.** When a store lookup is needed, follow [store-selection.md](store-selection.md) before opening any capture: brief first, one tier at a time (seed index, then personal frontmatter, then optional external), short candidate lists, stop until the user confirms. Modes are task-only; they do not change disk.
+3. **From the brief**, name domain(s), archetype, motion need, and optional principles. Call the Skill tool with "design-brief" if the read is missing. Domain tags come from [taxonomy.md](taxonomy.md).
+4. **After lock, open at most two or three** capture files from the confirmed working set whose tags and audience fit. An entry from a different audience is evidence about that audience, not this one. Audience mismatch still wins over a domain match.
+5. **Never** load every seed body, treat a directory listing as the finding, substitute the provenance table for reading the two or three files you selected, or scan alternate paths the user did not opt into.
 
-When the user asks for more motion on a surface, filter the type-by-complexity matrix against the brief, then open those files the same way. The personal store stays unindexed until scanning frontmatter costs more than reading it; tagged frontmatter is enough below that size.
+When the user asks for more motion on a surface and a store lookup is needed, filter the type-by-complexity matrix inside the same selection gate, then open locked files only. The personal store stays unindexed until scanning frontmatter costs more than reading it; tagged frontmatter is enough below that size.
 
 Say when a recommendation came from the store and from which entry, the same way `resolve-conventions` names the tier a decision came from. A recommendation whose source is invisible cannot be argued with.
 
@@ -80,4 +80,4 @@ Say when a recommendation came from the store and from which entry, the same way
 
 The shipped seed exists so a fresh install is not starting from zero. Below roughly fifteen *personal* entries, scanning that directory's frontmatter is faster than any index, and the personal store is mostly a notebook. That is the correct shape for it at that size. Build search when scanning starts costing more than reading, not before, and note that an index over five entries is a worse version of a prose file.
 
-When the store is thin for the surface, audience, and domain in front of you, or the user wants the base populated or refreshed from galleries, Call the Skill tool with "curate-design-inspiration". That skill confirms scope first, deduplicates against both stores, and writes new capture files to the personal store.
+When the accepted working set is thin for the surface, audience, and domain in front of you, or the user wants the base populated or refreshed from galleries, Call the Skill tool with "curate-design-inspiration" only after they agreed in selection (or asked explicitly). That skill confirms scope first, deduplicates against locations authorized this session, and writes new capture files to the confirmed personal destination (default `~/.jon-skills/design/references/`).

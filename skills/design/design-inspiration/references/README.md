@@ -2,7 +2,7 @@
 
 Provenance index for the seed that travels with the plugin. Open the file, do not treat this table as the finding.
 
-Personal captures at `~/.jon-skills/design/references/` outrank these. [capture.md](../capture.md) is the format. Domains and principles live in [taxonomy.md](../taxonomy.md). Layout archetypes live in [patterns.md](../patterns.md). Motion levels live in [motion.md](../motion.md). Filter by domain first, then archetype or motion; open at most two or three files.
+Default personal captures live at `~/.jon-skills/design/references/`. Which seed or personal entries feed a task is confirmed via [store-selection.md](../store-selection.md) when a store lookup is needed; do not assume silent outrank. [capture.md](../capture.md) is the format. Domains and principles live in [taxonomy.md](../taxonomy.md). Layout archetypes live in [patterns.md](../patterns.md). Motion levels live in [motion.md](../motion.md). Filter by domain first, then archetype or motion; open at most two or three files from the locked working set.
 
 
 ## By domain (taxonomy.md)
